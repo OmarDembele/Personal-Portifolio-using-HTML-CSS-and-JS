@@ -787,7 +787,7 @@ input[type="number"] {
 .list {
     list-style-type: none;
     padding: 0;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .list li {
@@ -799,35 +799,34 @@ input[type="number"] {
     color: #333;
     padding: 10px;
     margin: 10px 0;
+    font-size: 17px;
 }
 
 .list li.plus {
-    border-radius: 5px solid #2ecc71;
+    border-right: 5px solid #2ecc71;
 }
 
 .list li.minus {
-    border-radius: 5px solid #c0392b;
+    border-right: 5px solid #c0392b;
+}
+
+.transaction-value {
+    color: #333;
 }
 
 .delete-btn {
     cursor: pointer;
     background-color: #c0392b;
-    border: 0;
+    border: none;
     color: #fff;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 11px;
+    line-height: 15px;
     padding: 2px 5px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    opacity: 0;
-    transition: 0.5s ease;
+    border-radius: 5px;
 }
 
-.btn-expense:focus,
-.delete-btn:focus {
-    outline: 0;
+.delete-btn:hover {
+    background-color: darkred;
 }
 
 

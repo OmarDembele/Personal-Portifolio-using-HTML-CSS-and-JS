@@ -66,42 +66,10 @@ const projects = [
             "Explore interactive web development"
         ]
     },
-
-    {
-        id: 3,
-        category: "Mobile Development",
-        title: "Flutter Applications",
-        image: "assets/image/flutter.jfif",
-
-        author: "Omar Dembele",
-        date: "October 28, 2026",
-        readTime: "6 min read",
-        status: "Published",
-
-        description: "Explore the world of mobile application development with Flutter and Dart.",
-
-        details: "This article focuses on mobile application development using Flutter and Dart, two powerful technologies for building modern and high-performance mobile applications. It introduces the fundamentals of cross-platform development and explains how developers can create applications for both Android and iOS using a single codebase. It explores Dart as the programming language behind Flutter, including its syntax, variables, functions, classes, and object-oriented programming concepts. The article also presents Flutter's widget-based architecture and explains how widgets are used to build attractive, interactive, and responsive user interfaces. It covers important concepts such as layouts, navigation, state management, reusable components, user input handling, and application lifecycle management. In addition, it discusses how to organize a Flutter project, connect applications to REST APIs, retrieve and display data from remote servers, and manage application resources efficiently. Other topics include debugging, error handling, performance optimization, and best practices for writing clean, maintainable, and reusable code. Whether you are a beginner exploring mobile development or an aspiring developer looking to improve your Flutter skills, this article provides useful insights into the tools, techniques, and concepts needed to build reliable and user-friendly mobile applications.",
-
-        technologies: ["Flutter", "Dart"],
-
-        tags: [
-            "Flutter",
-            "Dart",
-            "Mobile Development",
-            "Cross-platform"
-        ],
-
-        features: [
-            "Cross-platform development",
-            "Modern user interfaces",
-            "Reusable components",
-            "Smooth user experience"
-        ]
-    },
     
 
     {
-        id: 4,
+        id: 3,
         category: "Backend Development",
         title: "Understanding Backend Development",
         image: "assets/image/backend.jpg",
@@ -148,7 +116,7 @@ const projects = [
     },
 
     {
-        id: 5,
+        id: 4,
         category: "Database Development",
         title: "Understanding Database Management",
         image: "assets/image/database.jpeg",
@@ -179,7 +147,49 @@ const projects = [
             "Discover database relationships and normalization",
             "Explore data integrity and security"
         ]
-    }
+    },
+
+    {
+        id: 5,
+        category: "Mobile Technology",
+        title: "Exploring the World of Mobile Apps",
+        image: "assets/image/flutter.jfif",
+
+        author: "Omar Dembele",
+        date: "October 28, 2026",
+        readTime: "6 min read",
+        status: "Published",
+
+        description: "Discover mobile applications, their features, technologies, and how they are transforming our everyday lives.",
+
+        details: "Mobile applications have become an essential part of our everyday lives. From communication and entertainment to education, shopping, banking, and productivity, mobile apps make many daily activities easier and more accessible. This blog explores the different types of mobile applications, their purposes, and the technologies behind them. It discusses how mobile apps are designed, developed, and maintained, while highlighting important concepts such as user interface design, user experience, performance, security, and data management. It also explores the differences between native and cross-platform applications, popular mobile development frameworks, and the latest trends shaping the mobile industry. Whether you are interested in discovering useful applications, understanding how they work, or learning about mobile development, this blog provides insights into the constantly evolving world of mobile technology.",
+
+        technologies: [
+            "Mobile Technology",
+            "Android",
+            "iOS",
+            "Flutter",
+            "React Native"
+        ],
+
+        tags: [
+            "Mobile Apps",
+            "Technology",
+            "Android",
+            "iOS",
+            "App Development",
+            "Innovation"
+        ],
+
+        features: [
+            "Explore different types of mobile applications",
+            "Discover popular mobile technologies",
+            "Understand native and cross-platform apps",
+            "Learn about mobile app design and development",
+            "Discover the latest mobile technology trends"
+        ]
+    },
+
 
 ];
 
@@ -337,11 +347,11 @@ const personal_projects = [
 
     {
     id: 3,
-    image: "assets/image/scolarite.avif",
+    image: "assets/image/weather.avif",
     category: "HTML-CSS & JS",
     title: "Weather App",
     description: "App designed to display current weather conditions and forecasts for different locations.",
-    link: "weather_app.html"
+    link: "weather.html"
     }
 ];
 
@@ -350,11 +360,13 @@ const container = document.getElementById("project-box");
 if(container) {
     container.innerHTML = personal_projects.map(project => `
         <div class="card-box">
-            <img src="${project.image}" alt="Project Image" class="project-image">
+            <img src="${project.image}" alt="${project.title}" class="project-image">
             <span>${project.category}</span>
-            <p>${project.title}</p>
+            <h3>${project.title}</h3>
             <h4>${project.description}</h4>
-            <a href="${project.link}" class="full-width-btn">See More</a>
+            <a href="${project.link}" class="full-width-btn">
+                See More
+            </a>
         </div>
     `).join("");
 }
@@ -411,9 +423,9 @@ function addTransactionToDOM(transaction) {
 
     item.innerHTML = `
         ${transaction.text}
-        <span>${sign}$${Math.abs(transaction.amount)}</span>
+        <span class="transaction-value">${sign}$${Math.abs(transaction.amount)}</span>
         <button class="delete-btn" onclick="removeTransaction(${transaction.id})">
-            x
+            <i class="fa-solid fa-trash"></i>
         </button>
     `;
 
