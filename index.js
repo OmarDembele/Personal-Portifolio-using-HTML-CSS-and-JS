@@ -1,4 +1,4 @@
-console.log("JS File load successfully");
+/*------------------ List of information in the blog ------------------------- */
 
 const projects = [
     {
@@ -183,6 +183,7 @@ const projects = [
 
 ];
 
+/*------------------Display blog ------------------------- */
 
 const projectContainer = document.getElementById("project-container");
 
@@ -203,8 +204,7 @@ if (projectContainer) {
     `).join("");
 }
 
-// Display details on details.html
-
+/*------------------Display details of blog ------------------------- */
 const detailsContainer = document.getElementById("section-details");
 
 if (detailsContainer) {
@@ -297,9 +297,7 @@ if (detailsContainer) {
     }
 }
 
-
-
-
+/*------------------ function to open or download cv ------------------------- */
 function myCv() {
     window.open("assets/cv/CV_Omar_Dembele_English.pdf", "_blank");
 }
@@ -316,3 +314,158 @@ function downloadCv() {
     document.body.removeChild(link);
 }
 
+/*------------------List of information of my personal projects ------------------------- */
+
+const personal_projects = [
+    {
+        id: 1,
+        image: "assets/image/tache.png",
+        category: "HTML-CSS & JS",
+        title: "Expense Tracker",
+        description: "App designed to track income, manage expenses, and monitor spending.",
+        link: "expense_tracker.html"
+    },
+
+    {
+        id: 2,
+        image: "assets/image/produit.jpg",
+        category: "HTML-CSS & JS",
+        title: "Todo List",
+        description: "App designed to create, organize, and manage daily tasks.",
+        link: "todo_list.html"
+    },
+
+    {
+    id: 3,
+    image: "assets/image/scolarite.avif",
+    category: "HTML-CSS & JS",
+    title: "Weather App",
+    description: "App designed to display current weather conditions and forecasts for different locations.",
+    link: "weather_app.html"
+    }
+];
+
+const container = document.getElementById("project-box");
+
+if(container) {
+    container.innerHTML = personal_projects.map(project => `
+        <div class="card-box">
+            <img src="${project.image}" alt="Project Image" class="project-image">
+            <span>${project.category}</span>
+            <p>${project.title}</p>
+            <h4>${project.description}</h4>
+            <a href="${project.link}" class="full-width-btn">See More</a>
+        </div>
+    `).join("");
+}
+
+
+/*------------------ Expense Tracker ------------------------- */
+
+const balance = document.getElementById("balance");
+const money_plus= document.getElementById("money-plus");
+const money_minus = document.getElementById("money-minus");
+const list = document.getElementById("list");
+const form = document.getElementById("form");
+const text = document.getElementById("text");
+const amount = document.getElementById("amount");
+
+const localStorageTransactions = JSON.parse(
+    localStorage.getItem('transactions')
+);
+
+let transactions = localStorage.getItem('transactions') !== null ? localStorageTransactions : []
+
+function addTransaction (e) {
+    e.preventDefault();
+
+    if(text.value.trim() === "" || amount.value.trim() === "") {
+        alert("Please add an expense and amount");
+    }
+    else {
+        const transaction = {
+            id: generateId(),
+            text: text.value,
+            amount: +amount.value
+        };
+        transactions.push(transaction);
+        addTransactionToDOM(transaction);
+
+        updateLocalStorage();
+        updateValue();
+
+        text.value = "";
+        amount.value = "";
+    }
+}
+
+/// Add transaction to the DOM list
+function addTransactionToDOM(transaction) {
+
+    /////// Get the sign plus or minus
+    const sign = transaction.amount < 0 ? "-" : "+";
+    const item = document.createElement("li");
+
+       // Add classes based on the value
+    item.classList.add(transaction.amount < 0 ? "minus" : "plus");
+
+    item.innerHTML = `
+        ${transaction.text}
+        <span>${sign}$${Math.abs(transaction.amount)}</span>
+        <button class="delete-btn" onclick="removeTransaction(${transaction.id})">
+            x
+        </button>
+    `;
+
+    list.appendChild(item);
+}
+
+// Generate a random ID
+function generateId() {
+    return Math.floor(Math.random() * 100000);
+}
+
+function removeTransaction(id) {
+    transactions = transactions.filter(transaction => transaction.id !== id);
+
+    updateLocalStorage();
+    init();
+}
+
+
+function updateValue() {
+
+    const amounts = transactions.map(transaction => transaction.amount);
+
+    const total = amounts.reduce((acc, item) => acc + item, 0);
+
+    const income = amounts
+        .filter(item => item > 0)
+        .reduce((acc, item) => acc + item, 0);
+
+    const expense = amounts
+        .filter(item => item < 0)
+        .reduce((acc, item) => acc + item, 0);
+
+    balance.innerText = `$${total.toFixed(2)}`;
+    money_plus.innerText = `+$${income.toFixed(2)}`;
+    money_minus.innerText = `-$${Math.abs(expense).toFixed(2)}`;
+}
+
+
+// Update localStorage
+function updateLocalStorage() {
+    localStorage.setItem("transaction", JSON.stringify(transactions));
+}
+
+function init() {
+    list.innerHTML = "";
+
+    transactions.forEach(addTransactionToDOM);
+
+    updateValue();
+}
+
+init();
+
+form.addEventListener("submit", addTransaction);

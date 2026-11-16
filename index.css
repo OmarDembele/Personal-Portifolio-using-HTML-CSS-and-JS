@@ -98,7 +98,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8%;
+    margin-top: 6%;
 }
 
 .home-img img {
@@ -191,7 +191,7 @@ span {
 }
 
 
-/* Projects Section */
+/*------------------- Projects Section ----------------*/
 
 .project-card {
     display: flex;
@@ -667,3 +667,168 @@ footer{
     background: var(--second-color);
     color: var(--color-white) ; 
 }
+
+/*----------------- Expense Tracker ----------------*/
+
+.header-expense {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem 0%;
+    background-color: #262626;
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease;
+    color: white;
+}
+
+.back-icon {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-expense h2, h4 {
+    font-size: 1.8rem;
+}
+
+.container-expense {
+    width: 50%;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+
+h3 {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin: 4% 0 1.5%;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+
+}
+
+.inc-exp-container {
+    background-color: var(--second-color);
+    border-radius: 10px;
+    box-shadow: var(--first-shadow-color);
+    margin-top: 3%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inc-exp-container p {
+    font-size: 2rem;
+}
+
+.inc-exp-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.money {
+    font-size: 2rem;
+    letter-spacing: 1;
+    margin: 5px 0;
+}
+
+.money-plus {
+    color: #2ecc71;
+}
+
+.money-minus {
+    color: #c0392b;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid var(--second-color);
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 2%;
+    width: 100%;
+}
+
+.btn-expense {
+    font-weight: 500;
+    padding: 12px 20px;
+    background: var(--text-color-second);
+    color: var(--color-white);
+    border: 0;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    margin-top: 3%;
+    width: 100%;
+}
+
+.btn-expense:hover {
+    background: var(--second-color);
+    color: var(--color-white);   
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10%;
+}
+
+.list li {
+    background-color: var(--second-color);
+    box-shadow: var(--first-shadow-color);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: #333;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.list li.plus {
+    border-radius: 5px solid #2ecc71;
+}
+
+.list li.minus {
+    border-radius: 5px solid #c0392b;
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: #c0392b;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.btn-expense:focus,
+.delete-btn:focus {
+    outline: 0;
+}
+
+
+
