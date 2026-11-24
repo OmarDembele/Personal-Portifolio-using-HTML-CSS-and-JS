@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="icon" type="image/png" href="assets/image/icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Omar Dembele - Portifolio</title>
+</head>
+<body>
+    <!-- header Section -->
+    <header class="header">
+
+        <a href="index.html" class="logo">Dembele</a>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html" id="home">Home</a>
+            <a href="explore.html" id="explore">Explore</a>
+            <a href="blog.html" id="blog">Blog</a>
+            <a href="contact.html" id="contact">Contact</a>
+        </nav>
+
+        <button class="nav-bars" id="navRight" aria-label="Scroll right">
+            <i class="uil uil-bars"></i>
+        </button>
+    </header>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Omar Dembele</span></h1>
+
+            <h3>Learning. Building. Growing.</h3>
+
+            <p>
+                My journey has not always been easy, but every experience has helped me grow.
+                I am continuing my education, learning new skills, and building my future.
+                I believe that hard work, patience, and determination can help me achieve my goals.
+            </p>
+
+            <div class="social-media">
+                <button onclick="myCv()" class="btn blue-btn">View Resumé</button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="assets/image/audace.jfif" alt="Photo of Omar">
+        </div>
+
+    </section>
+
+
+    <!-- My Journey Section -->
+    <section class="journey" id="journey">
+
+        <h2 class="section-title">My Journey</h2>
+
+        <div class="journey-content">
+
+            <div class="journey-image">
+                <img src="assets/image/journey.png" alt="A picture representing my journey">
+            </div>
+
+            <div class="journey-text">
+                <h3>A little about my journey</h3>
+
+                <p>
+                    I am originally from Senegal, a country that is part of my
+                    identity and has shaped who I am today. My roots, experiences,
+                    and values have taught me the importance of hard work,
+                    perseverance, and staying humble.
+                </p>
+
+                <p>
+                    My journey has been filled with learning experiences,
+                    challenges, and opportunities. Along the way, I developed
+                    an interest in technology and discovered my passion
+                    for software development.
+                </p>
+
+                <p>
+                    Moving to the United States opened a new chapter in my life.
+                    It gave me the opportunity to continue my education, improve
+                    my English, discover new perspectives, and challenge myself
+                    in ways I had never imagined.
+                </p>
+
+                <p>
+                    Today, I am studying at Oakland Community College and
+                    continuing to build my skills in technology. I am focused
+                    on growing, learning, and creating a better future
+                    for myself.
+                </p>
+
+                <p>
+                    This is only the beginning of my journey.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- My Classes Section -->
+    <section class="my-classes" id="classes">
+
+        <h2 class="section-title">My Classes</h2>
+
+        <div class="classes-container">
+
+            <table class="classes-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+
+                <tbody id="classes-container">
+                    
+                </tbody>
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- My Favorite & My Goals -->
+    <section class="favorite-goals">
+
+        <!-- My Favorite -->
+        <div class="favorite-section">
+
+            <h2 class="section-title">My Favorites</h2>
+
+            <div class="favorite-container">
+
+                <!-- Sport -->
+                <div class="favorite-card">
+                    <img src="assets/image/soccer.png" alt="Soccer">
+
+                    <h3>Soccer</h3>
+
+                    <a href="https://www.fifa.com/" target="_blank">
+                        Learn more →
+                    </a>
+                </div>
+
+                <!-- Movies -->
+                <div class="favorite-card">
+                    <img src="assets/image/GOT.png" alt="Movies">
+
+                    <h3>Games Of Thrones</h3>
+
+                    <a href="https://www.hbo.com/game-of-thrones" target="_blank">
+                        Learn more →
+                    </a>
+                </div>
+
+                <!-- Travel -->
+                <div class="favorite-card">
+                    <img src="assets/image/skiing.png" alt="Travel">
+
+                    <h3>Chamonix, France</h3>
+
+                    <a href="https://www.chamonix.com/" target="_blank">
+                        Learn more →
+                    </a>
+                </div>
+
+                <!-- Favorite Food -->
+                <div class="favorite-card">
+                    <img src="assets/image/rice.webp" alt="Thieboudienne">
+
+                    <h3>Rice – Fish</h3>
+
+                    <a href="https://en.wikipedia.org/wiki/Thieboudienne" target="_blank">
+                        Learn more →
+                    </a>
+                </div>
+
+                <!-- Coding -->
+                <div class="favorite-card">
+                    <img src="assets/image/code.jfif" alt="Coding">
+
+                    <h3>Coding & Technology</h3>
+
+                    <a href="https://www.freecodecamp.org/" target="_blank">
+                        Learn more →
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- My Goals -->
+        <div class="goals-section">
+
+            <h2 class="section-title">My Goals</h2>
+
+            <ul class="goals-list">
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Improve my programming skills</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Improve my English communication skills</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Build useful projects</span>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    <span>Graduate and build a successful career</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer Section -->
+            <!--------------------- FOOTER ---------------------->
+        <footer>
+            <div class="top-footer">
+                <p>Omar Dembele .</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer-menu-list">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="footer-menu-list">
+                        <a href="explore.html" class="nav-link">Explore</a>
+                    </li>
+                    <li class="footer-menu-list">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="footer-menu-list">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="footer-social-icons">
+                <div class="icon"> <i class="uil uil-instagram"></i> </div>
+                    <div class="icon"> <i class="uil uil-linkedin-alt"></i> </div>
+                    <div class="icon"> <i class="uil uil-dribbble"></i> </div>
+                    <div class="icon"> <i class="uil uil-github-alt"></i> </div>
+            </div> -->
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="" style="text-decoration: none;">Omar Dembele</a> - All rights reserved</p>
+            </div>
+        </footer>
+        <script src="assets/js/index.js"></script>
+</body>
+</html>
