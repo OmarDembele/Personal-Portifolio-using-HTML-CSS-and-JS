@@ -83,7 +83,7 @@ body{
     color: var(--color-white);   
 }
 
-/* ========================== MAIN HEADER SECTION ================================= */
+/* ========================== MAIN HEADER SECTION in page index.html ================================= */
 
 .header {
     position: fixed;
@@ -136,7 +136,7 @@ body{
     display: none;
 }
 
-/* ==========================  HERO Section in index page================================= */
+/* ==========================  HERO Section in page index.html ================================= */
 
 .hero {
     min-height: 80vh;
@@ -183,7 +183,7 @@ body{
     border: 2px solid var(--first-color);
 }
 
-/* ==========================  Journeys Section in index page================================= */
+/* ==========================  Journeys Section in page index.html ================================= */
 
 .journey {
     margin-top: -5%;
@@ -228,7 +228,7 @@ body{
     margin-bottom: 15px;
 }
 
-/* ==========================  Classes Section in index page ================================= */
+/* ==========================  Classes Section in page index.html ================================= */
 
 .my-classes {
     padding: 30px 8%;
@@ -277,7 +277,7 @@ body{
     text-decoration: underline;
 }
 
-/* ==========================  Favorites & Goals Section in index page ================================= */
+/* ==========================  Favorites & Goals Section in page index.html ================================= */
 
 /*-------------Favorite ----------------- */
 .favorite-goals {
@@ -360,7 +360,7 @@ body{
     font-size: 1rem;
 }
 
-/* ==========================  BLOG SECTION in blog page ================================= */
+/* ==========================  BLOG SECTION in page blog.html ================================= */
 
 .video-content {
     margin-top: 5%;
@@ -402,7 +402,7 @@ body{
     border-radius: 1.2rem;
     display: block;
 }
-/* ==========================  BLOG Projects in blog page ================================= */
+/* ==========================  BLOG Projects in page blog.html ================================= */
 
 .section-blog {
     margin-top: 2%;
@@ -417,20 +417,18 @@ body{
     flex-wrap: wrap;
 }
 
-/* ==========================  Academics SECTION in explore page ================================= */
+/* ==========================  Academics SECTION in page explore.html ================================= */
 
 .academics {
     padding: 30px 8%;
 }
 
-/* ACADEMIC SECTION */
 .academic-section {
     background: #0a1018;
     color: #f5f5f5;
     padding: 60px 8%;
 }
 
-/* EDUCATION */
 .education h2,
 .skills-content h2 {
     font-size: 35px;
@@ -445,14 +443,12 @@ body{
     margin-bottom: 40px;
 }
 
-/* EDUCATION GRID */
 .education-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 60px;
 }
 
-/* EDUCATION CARD */
 .education-card h3 {
     font-size: 21px;
     margin-bottom: 10px;
@@ -465,8 +461,6 @@ body{
     padding-left: 4%;
 }
 
-
-/* SKILLS SECTION */
 .academic-skills {
     display: flex;
     align-items: center;
@@ -474,7 +468,6 @@ body{
     margin-top: 100px;
 }
 
-/* LEFT IMAGE */
 .skills-image {
     width: 35%;
     align-items: center;
@@ -488,7 +481,6 @@ body{
     border: 1px solid wheat;
 }
 
-/* RIGHT CONTENT */
 .skills-content {
     flex: 1;
 }
@@ -499,7 +491,6 @@ body{
     margin-bottom: 10px;
 }
 
-/* EACH SKILL */
 .skill {
     margin-bottom: 22px;
 }
@@ -511,7 +502,6 @@ body{
     font-size: 11px;
 }
 
-/* BAR BACKGROUND */
 .skill-bar {
     width: 100%;
     height: 8px;
@@ -520,14 +510,12 @@ body{
     overflow: hidden;
 }
 
-/* BAR PROGRESS */
 .skill-progress {
     height: 100%;
     background: var(--first-color);
     border-radius: 20px;
 }
 
-/* INDIVIDUAL PROGRESS */
 .html {
     width: 85%;
 }
@@ -548,8 +536,7 @@ body{
     width: 65%;
 }
 
-
-/* -------------- Projects Section -------------------*/
+/* ==========================  Personals Projects SECTION in page explore.html ================================= */
 
 .section-project {
     padding: 30px 8%;
@@ -630,7 +617,7 @@ body{
     font-weight: 600;
     color: black;
     border: none;
-    border-radius: 0 0 8px 8px; /* Rounded corners for the bottom */
+    border-radius: 0 0 8px 8px;
     text-align: center;
     cursor: pointer;
 }
@@ -639,12 +626,7 @@ body{
     background: var(--second-color);
 }
 
-
-
-/*---------------------- Interrest Section-------------------------*/
-
-
-/* ============================== INTEREST SECTION ================================= */
+/* ============================== INTEREST SECTION page explore.html ================================= */
 
 .interest-section {
     padding: 30px 8%;
@@ -665,13 +647,11 @@ body{
     height: 290px;
     min-width: 0;
     overflow: hidden;
-
     background: linear-gradient(
         145deg,
         #202b38,
         #19232f
     );
-
     border: 1px solid #394858;
     border-radius: 24px;
 }
@@ -680,7 +660,6 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
-
     padding: 20px 20px 0;
 }
 
@@ -689,14 +668,12 @@ body{
     font-size: 30px;
     line-height: 1;
     margin-top: 2px;
-
     text-shadow: 0 0 14px rgba(89, 230, 193, 0.25);
 }
 
 .section-heading h2 {
     font-size: 22px;
     font-weight: 700;
-
     margin: 0 0 8px;
     color: white;
 }
@@ -705,14 +682,11 @@ body{
     color: #aab4c1;
     font-size: 14px;
     line-height: 1.5;
-
     margin: 0;
 }
 
 
-/* ==============================
-   MY READS
-================================= */
+/* ============================== MY READS Section in page explore.html ================================ */
 
 .reads {
     display: flex;
@@ -724,9 +698,6 @@ body{
     padding-right: 18px;
 }
 
-
-/* Book button */
-
 .book-button {
     position: absolute;
     left: 50%;
@@ -734,17 +705,12 @@ body{
     transform: translateX(-50%);
     width: 150px;
     height: 165px;
-
     padding: 0;
     border: none;
     background: transparent;
-
     cursor: pointer;
     perspective: 800px;
 }
-
-
-/* Shadow behind book */
 
 .book-shadow {
     position: absolute;
@@ -754,12 +720,8 @@ body{
 
     background: #b8b7a8;
     transform: rotate(2deg);
-
     border-radius: 2px;
 }
-
-
-/* Book body */
 
 .book-object {
     position: absolute;
@@ -770,7 +732,6 @@ body{
     width: 132px;
     height: 172px;
     overflow: hidden;
-
     background:
         linear-gradient(
             90deg,
@@ -784,33 +745,23 @@ body{
     box-shadow:
         4px 3px 0 #d2cfbf,
         7px 4px 5px rgba(0,0,0,0.2);
-
     transform: rotate(-2deg);
-
     transition:
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
-
-
-/* Top subtitle on cover */
 
 .book-top {
     height: 30px;
     flex-shrink: 0;
 }
 
-
-/* Cover title */
-
 .book-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     color: #27251f;
     text-align: center;
-
     padding: 4px 5px;
 }
 
@@ -826,17 +777,11 @@ body{
     font-weight: 900;
     font-size: 15px;
     line-height: 0.95;
-
     text-align: left;
-
     margin-top: 12px;
-
     color: #c6a071;
     text-shadow: 1px 1px 0 #e1c29b;
 }
-
-
-/* Hover book */
 
 .book-button:hover .book-object {
     transform: translateY(-8px) rotate(-3deg);
@@ -844,9 +789,6 @@ body{
         5px 5px 0 #d2cfbf,
         12px 14px 18px rgba(0,0,0,0.25);
 }
-
-
-/* Hint */
 
 .hint {
     position: absolute;
@@ -865,17 +807,12 @@ body{
 }
 
 
-/* ==============================
-   MY TOOLBOX
-================================= */
+/* =================== MY TOOLBOX in page explore.html ========================= */
 
 .toolbox {
     display: flex;
     flex-direction: column;
 }
-
-
-/* Toolbox heading */
 
 .toolbox .section-heading {
     padding-top: 40px;
@@ -883,78 +820,51 @@ body{
 }
 
 
-/* ==============================
-   MARQUEE
-================================= */
+/* ================== MARQUEE in page explore.html ========================= */
 
 .marquee {
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 42px;
-
     display: flex;
     overflow: hidden;
-
     width: 100%;
 }
-
-
-/* Animated track */
 
 .marquee-track {
     display: flex;
     width: max-content;
-
     animation: toolScroll 24s linear infinite;
 }
-
-
-/* Pause on hover */
 
 .marquee:hover .marquee-track,
 .toolbox:hover .marquee-track {
     animation-play-state: paused;
 }
 
-
-/* Each list */
-
 .tool-list {
     display: flex;
     align-items: center;
     gap: 18px;
-
     padding-right: 18px;
-
     flex-shrink: 0;
 }
-
-
-/* Individual technology card */
 
 .tool {
     display: flex;
     align-items: center;
     gap: 12px;
-
     min-width: 145px;
     height: 53px;
-
     padding: 8px 12px;
-
     border: 1px solid #3b4a5c;
     border-radius: 12px;
-
     background: rgba(30, 41, 54, 0.75);
-
     color: #d9e1eb;
     font-size: 14px;
     font-weight: 500;
-
     white-space: nowrap;
-
     transition:
         background 0.3s ease,
         border-color 0.3s ease,
@@ -967,74 +877,45 @@ body{
     border-color: #56d9bd;
 }
 
-
-/* Technology icon */
-
 .tool-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
-
     width: 38px;
     height: 38px;
-
     font-size: 29px;
     color: #55d9c4;
 }
 
-
-/* JavaScript icon */
-
 .tool-icon.js a{
     border-radius: 7px;
     background: #56d9c4;
-
     color: #172431;
-
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: 800;
 }
 
-
-/* HTML icon */
-
 .tool-icon.html a{
     color: #56d9c4;
 }
-
-
-/* CSS icon */
 
 .tool-icon.css a{
     color: #56d9c4;
 }
 
-
-/* React icon */
-
 .tool-icon.react a{
     color: #56d9c4;
 }
-
-
-/* Chrome icon */
 
 .tool-icon.chrome a{
     color: #56d9c4;
 }
 
-
-/* Github */
-
 .tool-icon.github a{
     color: #56d9c4;
 }
-
-
-/* Animation */
 
 @keyframes toolScroll {
     from {
@@ -1046,91 +927,18 @@ body{
     }
 }
 
-
-/* Toolbox note */
-
 .tool-note {
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: 12px;
-
     margin: 0;
-
     color: #8493a5;
     font-size: 11px;
     text-align: center;
 }
 
-
-/* ==============================
-   RESPONSIVE
-================================= */
-/* 
-@media (max-width: 900px) {
-
-    .interst-content {
-        grid-template-columns: 250px minmax(0, 1fr);
-        gap: 18px;
-    }
-
-    .section-heading {
-        padding-left: 24px;
-        padding-right: 20px;
-    }
-
-    .section-heading h2 {
-        font-size: 23px;
-    }
-
-    .section-heading p {
-        font-size: 13px;
-    }
-
-    .tool-list {
-        gap: 12px;
-    }
-
-    .tool {
-        min-width: 130px;
-    }
-}
-
-
-@media (max-width: 650px) {
-
-    .interst-content {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .reads {
-        height: 290px;
-    }
-
-    .toolbox {
-        height: 290px;
-    }
-}
-
-
-
-@media (prefers-reduced-motion: reduce) {
-
-    .marquee-track {
-        animation: none;
-    }
-
-    .book-object,
-    .tool {
-        transition: none;
-    }
-} */
-
-
-
-/* ============================ BEYOND THE CODE ============================ */
+/* ============================ BEYOND THE CODE in page explore.html============================ */
 
 .interest-content2 {
     margin-top: 0.5%;
@@ -1158,16 +966,10 @@ body{
     border-radius: 24px;
 }
 
-
-/* ============================
-   SECTION HEADING
-============================ */
-
 .beyond .section-heading {
     display: flex;
     align-items: flex-start;
     gap: 14px;
-
     padding: 28px 34px 0;
 }
 
@@ -1175,17 +977,13 @@ body{
     color: #59e6c1;
     font-size: 30px;
     line-height: 1;
-
     margin-top: 2px;
-
     text-shadow: 0 0 14px rgba(89, 230, 193, 0.25);
 }
 
 .beyond .section-heading h2 {
     margin: 0 0 8px;
-
     color: #f0f1f5;
-
     font-family: Georgia, serif;
     font-size: 27px;
     font-weight: 700;
@@ -1193,261 +991,185 @@ body{
 
 .beyond .section-heading p {
     margin: 0;
-
     color: #aab4c1;
-
     font-size: 15px;
     line-height: 1.5;
 }
 
 
-/* ============================
-   HOBBIES LAYOUT
-============================ */
+/* ======================= HOBBIES LAYOUT in page explore.html ======================== */
 
 .hobbies {
     position: absolute;
-
     left: 12px;
     right: 12px;
     bottom: 16px;
-
     display: grid;
-
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(3, 34px);
-
     align-items: center;
-
     row-gap: 7px;
 }
 
 
-/* ============================
-   HOBBY BADGES
-============================ */
+/* ================== HOBBY BADGES in page explore.html ================== */
 
 .hobby {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
-
     height: 34px;
     padding: 0 18px;
-
     border-radius: 30px;
-
     background: linear-gradient(
         110deg,
         #60dfb9,
         #36b9ed
     );
-
     color: #14232e;
-
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
-
     white-space: nowrap;
-
     cursor: default;
-
     transition:
         transform 0.3s ease,
         filter 0.3s ease;
 }
 
 
-/* ============================
-   HOBBY POSITIONS
-============================ */
+/* =================== HOBBY POSITIONS in page explore.html =================== */
 
 .gaming {
     grid-column: 3 / 6;
     grid-row: 1;
-
     justify-self: center;
 }
 
 .cooking {
     grid-column: 8 / 12;
     grid-row: 1;
-
     justify-self: center;
 }
 
 .fitness {
     grid-column: 1 / 4;
     grid-row: 2;
-
     justify-self: center;
 }
 
 .traveling {
     grid-column: 5 / 8;
     grid-row: 2;
-
     justify-self: center;
 }
 
 .reading {
     grid-column: 9 / 13;
     grid-row: 2;
-
     justify-self: center;
 }
 
 .music {
     grid-column: 2 / 5;
     grid-row: 3;
-
     justify-self: center;
 }
 
 .videography {
     grid-column: 6 / 10;
     grid-row: 3;
-
     justify-self: center;
 }
 
 
-/* ============================
-   HOVER
-============================ */
+/* ============================ HOVER in page explore.html ============= */
 
 .hobby:hover {
     transform: translateY(-3px);
     filter: brightness(1.08);
 }
 
-
-/* ============================
-   LOCATION PLACEHOLDER
-============================ */
-
-
-/* ============================
-   LOCATION MAP
-============================ */
+/* ======================== LOCATION MAP in page explore.html ====================== */
 
 .location {
     position: relative;
     width: 100%;
     height: 290px;
     min-width: 0;
-
     overflow: hidden;
-
     border: 1px solid #394858;
     border-radius: 24px;
-
     background: #1e3444;
 }
-
-
-/* Map iframe */
 
 .map-frame {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     border: none;
-
     filter: saturate(0.85);
 }
-
-
-/* Dark overlay */
 
 .map-overlay {
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         to bottom,
         rgba(15, 23, 38, 0.05) 45%,
         rgba(15, 23, 38, 0.15) 60%,
         rgba(15, 23, 38, 0.55) 100%
     );
-
     pointer-events: none;
 }
 
-
-/* Profile photo */
-
 .map-profile {
     position: absolute;
-
     width: 90px;
     height: 90px;
-
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     border-radius: 50%;
     overflow: hidden;
-
     border: 3px solid rgba(255, 255, 255, 0.75);
-
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
-
     z-index: 2;
 }
 
 .map-profile img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
 }
 
-
-/* Location name */
-
 .map-label {
     position: absolute;
-
     bottom: 65px;
     left: 0;
     right: 0;
-
     z-index: 3;
-
     text-align: center;
-
     color: white;
-
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-
     pointer-events: none;
 }
 
 .map-label h3 {
     margin: 0;
-
     font-size: 17px;
     font-weight: 700;
 }
 
 .map-label p {
     margin: 3px 0 0;
-
     font-size: 13px;
     color: #e0e5ec;
 }
 
-
-
-/*---------------------- Details Projects-------------------------*/
+/* ======================== Details Projects in page detail.html ====================== */
 
 .details-section {
     margin-top: 8%;
@@ -1491,7 +1213,7 @@ body{
     margin-top: 3.5%;
 }
 
-/*--------------- Explore Section -----------------*/
+/* ======================== Explore First Section in page explore.html ====================== */
 .explore {
     display: flex;
     align-items: center;
@@ -1549,8 +1271,6 @@ body{
     transition: 0.3s;
 }
 
-
-
 .btn:hover {
     transform: translateY(-3px);
 }
@@ -1586,10 +1306,7 @@ body{
     transform: translateY(-3px);
 }
 
-
-
-
-/*----------------- Contact ----------------*/
+/* ======================== Contact in page contact.html ====================== */
 
 .top-header{
     margin-top: 2em;
@@ -1606,8 +1323,7 @@ body{
     color: #999;
 }
 
-
-/*----------------- CONTACT BOX ----------------*/
+/* ======================== Contact Box in page contact.html ====================== */
 
 .contact {
     display: flex;
@@ -1703,9 +1419,8 @@ span {
     width: 50%;
 }
 
+/* ======================== Contact Form in page contact.html ====================== */
 
-
-/*----------------- CONTACT FORM ----------------*/
 .form-control{
     display: flex;
     flex-direction: column;
@@ -1755,8 +1470,7 @@ textarea{
     font-size: 18px;
 }
 
-
-/*----------------- Expense Tracker ----------------*/
+/* ======================== Expense Tracker Project in page expense.html ====================== */
 
 .header-expense {
     position: fixed;
@@ -1917,8 +1631,7 @@ input[type="number"] {
     background-color: darkred;
 }
 
-
-/*-----------------  TODO LIST ----------------*/
+/* ======================== TODO LIST Projects in page todo_list.html ====================== */
 
 .container-todo {
     width: 50%;
@@ -1960,7 +1673,7 @@ input[type="number"] {
 
 
 
-/* ========== WELCOME WEATHER SCREEN ========== */
+/* ========== WELCOME WEATHER SCREEN in page weather.html ========== */
 
 .welcome-section {
     min-height: 100vh;
@@ -1968,27 +1681,20 @@ input[type="number"] {
     justify-content: center;
     align-items: center;
     padding: 25px;
-
-    /* Rainy city background */
     background-image: url("../image/weather_background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-
-/* Main container */
 .welcome-container {
     width: 340px;
     padding: 28px 30px 22px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     border: 1px solid var(--first-color);
     border-radius: 22px;
-
     background: rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
@@ -1996,15 +1702,11 @@ input[type="number"] {
     box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
 }
 
-
-/* Logo */
 .welcome-section .logo {
     display: flex;
     align-items: center;
     gap: 7px;
-
     margin-bottom: 20px;
-
     color: black;
     font-size: 17px;
     font-weight: 700;
@@ -2019,8 +1721,6 @@ input[type="number"] {
     color: black;
 }
 
-
-/* Welcome content */
 .welcome-content {
     width: 100%;
     text-align: center;
@@ -2041,16 +1741,12 @@ input[type="number"] {
     font-size: 14px;
 }
 
-
-/* Form */
 #nameForm {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-
-/* Name input */
 .name-input {
     display: flex;
     align-items: center;
@@ -2081,8 +1777,6 @@ input[type="number"] {
     color: black;
 }
 
-
-/* Continue button */
 .continue-btn {
     width: 100%;
     height: 40px;
@@ -2111,8 +1805,6 @@ input[type="number"] {
     font-size: 17px;
 }
 
-
-/* Footer */
 .welcome-footer span{
     display: flex;
     justify-content: center;
@@ -2127,7 +1819,7 @@ input[type="number"] {
 
 
 
-/* ========================================= WEATHER HEADER SECTION ======================================== */
+/* ======================= WEATHER HEADER SECTION in page weather.html ============================= */
 
 .weather-body {
     background: url("../image/weather_background.jpg") center / cover no-repeat fixed;
@@ -2187,7 +1879,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= WEATHER MAIN SECTION ========================================= */
+/* ========================================= WEATHER MAIN SECTION in page weather.html ========================================= */
 
 .weather-section {
     width: 60%;
@@ -2200,7 +1892,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= WELCOME MESSAGE ========================================= */
+/* ========================================= WELCOME MESSAGE in page weather.html ========================================= */
 
 .welcome-message {
     text-align: center;
@@ -2224,7 +1916,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= DASHBOARD CONTENT ========================================= */
+/* ========================================= DASHBOARD CONTENT in page weather.html ========================================= */
 
 .dashboard-content {
     display: flex;
@@ -2235,7 +1927,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= CURRENT WEATHER CARD ======================================== */
+/* ========================================= CURRENT WEATHER CARD in page weather.html ======================================== */
 
 .current-weather-card {
     flex: 1;
@@ -2284,7 +1976,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= LAST VISIT CARD ========================================= */
+/* ========================================= LAST VISIT CARD in page weather.html ========================================= */
 
 .last-visit-card {
     flex: 1;
@@ -2299,8 +1991,6 @@ input[type="number"] {
     box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
 }
 
-
-/* LAST VISIT TITLE */
 
 .last-visit-heading {
     display: flex;
@@ -2321,9 +2011,6 @@ input[type="number"] {
     margin: 0;
 }
 
-
-/* LAST VISIT TEXT */
-
 .last-visit-card p {
     font-size: 1.4rem;
     font-weight: 800;
@@ -2333,7 +2020,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= WEATHER FOOTER ========================================= */
+/* ========================================= WEATHER FOOTER in page weather.html ========================================= */
 
 .weather-footer {
     display: flex;
@@ -2357,9 +2044,6 @@ input[type="number"] {
     white-space: nowrap;
 }
 
-
-/* FOOTER DECORATIVE LINES */
-
 .footer-line {
     width: 18%;
     height: 1px;
@@ -2367,8 +2051,8 @@ input[type="number"] {
 }
 
 
+/* ========================================= FOOTER BOX ========================================= */
 
-/*----------------- FOOTER BOX ----------------*/
 footer{
     display: flex;
     justify-content: center;
