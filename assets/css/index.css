@@ -1,4 +1,6 @@
-/* --------- VARIABLES ------ */
+
+/* ========================== VARIABLES ================================= */
+
 :root{
     --body-color: rgb(250,250,250);
     --color-white: rgb(255, 255, 255);
@@ -21,14 +23,14 @@
     font-family: 'Poppins', 'sans serif';
 }
 
-/* -------- SMOOTH SCROLL -------- */
+/* ========================== SMOOTH SCROLL ================================= */
+
 html{
     scroll-behavior: smooth;
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
-/* -------- CHANGE THE SCROLL BAR DESIGN -------- */
 ::-webkit-scrollbar{
     width: 10px;
     border-radius: 20px;
@@ -44,9 +46,8 @@ html{
     border-radius: 30px;
 }
 
+/* ========================== BASE ================================= */
 
-
-/* -------- BASE -------- */
 body{
     background: var(--body-color);
 }
@@ -82,7 +83,7 @@ body{
     color: var(--color-white);   
 }
 
-/* -------- Nav Section -------- */
+/* ========================== MAIN HEADER SECTION ================================= */
 
 .header {
     position: fixed;
@@ -135,10 +136,8 @@ body{
     display: none;
 }
 
+/* ==========================  HERO Section in index page================================= */
 
-/* -------- HERO Section -------- */
-
-/* Hero section */
 .hero {
     min-height: 80vh;
     display: flex;
@@ -149,12 +148,10 @@ body{
     margin-top: 3%;
 }
 
-/* Text container */
 .hero-text {
     max-width: 700px;
 }
 
-/* Main title */
 .hero-text h1 {
     font-size: 5rem;
     font-weight: 700;
@@ -166,13 +163,11 @@ body{
     color: var(--first-color);
 }
 
-/* Subtitle */
 .hero-text h3 {
     font-size: 22px;
     margin-bottom: 20px;
 }
 
-/* Description */
 .hero-text p {
     font-size: 1.6rem;
     font-style: italic;
@@ -180,7 +175,6 @@ body{
     margin-bottom: 30px;
 }
 
-/* Image */
 .hero-image img {
     width: 400px;
     height: 400px;
@@ -189,8 +183,7 @@ body{
     border: 2px solid var(--first-color);
 }
 
-
-/* -------- Journeys Section -------- */
+/* ==========================  Journeys Section in index page================================= */
 
 .journey {
     margin-top: -5%;
@@ -235,8 +228,8 @@ body{
     margin-bottom: 15px;
 }
 
+/* ==========================  Classes Section in index page ================================= */
 
-/* -------- Classes Section -------- */
 .my-classes {
     padding: 30px 8%;
 }
@@ -284,9 +277,9 @@ body{
     text-decoration: underline;
 }
 
+/* ==========================  Favorites & Goals Section in index page ================================= */
 
-/* -------- Favorites & Goals Section -------- */
-
+/*-------------Favorite ----------------- */
 .favorite-goals {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -295,16 +288,12 @@ body{
     align-items: start;
 }
 
-/* SECTION TITLE */
-
 .favorite-goals .section-title {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
     border-left: 5px solid var(--first-color);
     padding-left: 1rem;
 }
-
-/* FAVORITES */
 
 .favorite-container {
     display: grid;
@@ -340,7 +329,7 @@ body{
     text-decoration: underline;
 }
 
-/* GOALS */
+/*------------ GOALS ----------------- */
 
 .goals-list {
     list-style: none;
@@ -371,9 +360,7 @@ body{
     font-size: 1rem;
 }
 
-
-/* ---------------- BLOG SECTION -------------*/
-
+/* ==========================  BLOG SECTION in blog page ================================= */
 
 .video-content {
     margin-top: 5%;
@@ -415,8 +402,7 @@ body{
     border-radius: 1.2rem;
     display: block;
 }
-
-/*------------------- Blog Projects Section ----------------*/
+/* ==========================  BLOG Projects in blog page ================================= */
 
 .section-blog {
     margin-top: 2%;
@@ -431,7 +417,8 @@ body{
     flex-wrap: wrap;
 }
 
-/* -------------- Academics Section -------------------*/
+/* ==========================  Academics SECTION in explore page ================================= */
+
 .academics {
     padding: 30px 8%;
 }
@@ -1972,6 +1959,415 @@ input[type="number"] {
 }
 
 
+
+/* ========== WELCOME WEATHER SCREEN ========== */
+
+.welcome-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    /* Rainy city background */
+    background-image: url("../image/weather_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Main container */
+.welcome-container {
+    width: 340px;
+    padding: 28px 30px 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid var(--first-color);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Logo */
+.welcome-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 20px;
+
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.welcome-section .logo i {
+    font-size: 28px;
+    color: black;
+}
+
+.logo-blue {
+    color: black;
+}
+
+
+/* Welcome content */
+.welcome-content {
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-content h1 {
+    margin: 0;
+
+    color: #101b32;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.welcome-subtitle {
+    margin: 4px 0 18px;
+
+    color: black;
+    font-size: 14px;
+}
+
+
+/* Form */
+#nameForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* Name input */
+.name-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 42px;
+    padding: 0 13px;
+    border: 1px solid var(--first-color);
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: 0 3px 12px rgba(255, 255, 255, 0.15);
+}
+
+.name-input i {
+    color: black;
+    font-size: 17px;
+}
+
+.name-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: black ;
+    font-size: 13px;
+}
+
+.name-input input::placeholder {
+    color: black;
+}
+
+
+/* Continue button */
+.continue-btn {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    border: none;
+    border-radius: 10px;
+    background: var(--first-color);
+    color: black ;
+
+    font-size: 13px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.continue-btn:hover {
+    background: #142b50;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+.continue-btn i {
+    font-size: 17px;
+}
+
+
+/* Footer */
+.welcome-footer span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: 22px;
+
+    color: black;
+    font-size: 10px;
+}
+
+
+
+/* ========================================= WEATHER HEADER SECTION ======================================== */
+
+.weather-body {
+    background: url("../image/weather_background.jpg") center / cover no-repeat fixed;
+}
+
+.weather-header {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.weather-brand img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.weather-brand h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.weather-brand h2 span {
+    color: black;
+}
+
+.location-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 22px;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50px;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.location-badge i {
+    font-size: 2rem;
+}
+
+
+/* ========================================= WEATHER MAIN SECTION ========================================= */
+
+.weather-section {
+    width: 60%;
+    margin: 15px auto 40px;
+    padding: 40px;
+    border-radius: 35px;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 15px 45px rgba(10, 43, 95, 0.18);
+}
+
+
+/* ========================================= WELCOME MESSAGE ========================================= */
+
+.welcome-message {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-message h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: black;
+    margin: 0 0 12px;
+    letter-spacing: -1.5px;
+}
+
+.welcome-message p {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    line-height: 1.7;
+}
+
+
+/* ========================================= DASHBOARD CONTENT ========================================= */
+
+.dashboard-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+
+/* ========================================= CURRENT WEATHER CARD ======================================== */
+
+.current-weather-card {
+    flex: 1;
+    min-height: 180px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+}
+
+
+.weather-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-icon i {
+    font-size: 10rem;
+    color: #087bff;
+}
+
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-info h2 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #071b43;
+    margin: 0 0 10px;
+}
+
+.weather-info p {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+}
+
+
+/* ========================================= LAST VISIT CARD ========================================= */
+
+.last-visit-card {
+    flex: 1;
+    min-height: 180px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+}
+
+
+/* LAST VISIT TITLE */
+
+.last-visit-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.last-visit-heading i {
+    font-size: 2.8rem;
+    color: #087bff;
+}
+
+.last-visit-heading h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+}
+
+
+/* LAST VISIT TEXT */
+
+.last-visit-card p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 2;
+    color: black;
+    margin: 0;
+}
+
+
+/* ========================================= WEATHER FOOTER ========================================= */
+
+.weather-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    margin-top: 15px;
+    background: transparent;
+}
+
+.weather-footer i {
+    font-size: 2.8rem;
+    color: var(--first-color-hover);
+    font-weight: 800;
+}
+
+.weather-footer p {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+/* FOOTER DECORATIVE LINES */
+
+.footer-line {
+    width: 18%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.65);
+}
+
+
+
 /*----------------- FOOTER BOX ----------------*/
 footer{
     display: flex;
@@ -2469,42 +2865,42 @@ footer{
     /* -------------- Projects Section -------------------*/
 
     /* Projects Section */
-.section-project {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 30px 8%;
-}
+    .section-project {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px 8%;
+    }
 
-.project-card {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
+    .project-card {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 
-.card-box {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    background-color: var(--color-white);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    .card-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        background-color: var(--color-white);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
 
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
 
-.card-box img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
+    .card-box img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
 
 /* ============================ BEYOND THE CODE ============================ */
 
@@ -2712,6 +3108,184 @@ footer{
         border-radius: 50%;
         border: 2px solid var(--first-color);
     }
+
+    
+    /* ========================================= WELCOME WEATHER SCREEN ========================================= */
+
+    /* Logo */
+    .welcome-container .logo {
+        display: none;
+    }
+
+    /* ========================================= WEATHER HEADER SECTION ========================================= */
+
+    .weather-header {
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weather-brand {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ========================================= WEATHER MAIN SECTION ========================================= */
+
+    .weather-section {
+        width: 90%;
+        border-radius: 35px;
+        background: rgba(255, 255, 255, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        box-shadow: 0 15px 45px rgba(10, 43, 95, 0.18);
+    }
+
+
+    /* ========================================= WELCOME MESSAGE ========================================= */
+
+    .welcome-message {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .welcome-message h1 {
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: black;
+        margin: 0 0 12px;
+        letter-spacing: -1.5px;
+    }
+
+    .welcome-message p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+
+    /* ========================================= DASHBOARD CONTENT ========================================= */
+
+    .dashboard-content {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    /* ========================================= CURRENT WEATHER CARD ======================================== */
+
+    .current-weather-card {
+        flex: 1;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+    }
+
+
+    .weather-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weather-icon i {
+        font-size: 6.5rem;
+        color: #087bff;
+    }
+
+
+    .weather-info {
+        text-align: center;
+    }
+
+    .weather-info h2 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #071b43;
+        margin: 0 0 10px;
+    }
+
+    .weather-info p {
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* ========================================= LAST VISIT CARD ========================================= */
+
+    .last-visit-card {
+        margin-top: 1%;
+        flex: 1;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+    }
+
+
+    /* LAST VISIT TITLE */
+
+    .last-visit-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .last-visit-heading i {
+        font-size: 2.8rem;
+        color: #087bff;
+    }
+
+    .last-visit-heading h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* LAST VISIT TEXT */
+
+    .last-visit-card p {
+        font-size: 1.4rem;
+        font-weight: 800;
+        line-height: 2;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* ========================================= WEATHER FOOTER ========================================= */
+
+    .weather-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+        margin-top: 1px;
+        background: transparent;
+    }
+
 
 }
 
@@ -3115,6 +3689,178 @@ footer{
         border-radius: 50px;
     }
 
+     /* ========== WELCOME WEATHER SCREEN ========== */
+
+    /* Logo */
+    .welcome-container .logo {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .welcome-content {
+        margin-top: 15%;
+    }
+
+    /* ========================================= WEATHER MAIN SECTION ========================================= */
+
+    .weather-section {
+        width: 90%;
+        border-radius: 35px;
+        background: rgba(255, 255, 255, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        box-shadow: 0 15px 45px rgba(10, 43, 95, 0.18);
+    }
+
+
+    /* ========================================= WELCOME MESSAGE ========================================= */
+
+    .welcome-message {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .welcome-message h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: black;
+        margin: 0 0 12px;
+        letter-spacing: -1.5px;
+    }
+
+    .welcome-message p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+
+    /* ========================================= DASHBOARD CONTENT ========================================= */
+
+    .dashboard-content {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    /* ========================================= CURRENT WEATHER CARD ======================================== */
+
+    .current-weather-card {
+        flex: 1;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+    }
+
+
+    .weather-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weather-icon i {
+        font-size: 6.5rem;
+        color: #087bff;
+    }
+
+
+    .weather-info {
+        text-align: center;
+    }
+
+    .weather-info h2 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #071b43;
+        margin: 0 0 10px;
+    }
+
+    .weather-info p {
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* ========================================= LAST VISIT CARD ========================================= */
+
+    .last-visit-card {
+        margin-top: 1%;
+        flex: 1;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+    }
+
+
+    /* LAST VISIT TITLE */
+
+    .last-visit-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .last-visit-heading i {
+        font-size: 2.8rem;
+        color: #087bff;
+    }
+
+    .last-visit-heading h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* LAST VISIT TEXT */
+
+    .last-visit-card p {
+        font-size: 1.4rem;
+        font-weight: 800;
+        line-height: 2;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* ========================================= WEATHER FOOTER ========================================= */
+
+    .weather-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+        margin-top: 1px;
+        background: transparent;
+    }
+
 }
 
 
@@ -3415,6 +4161,161 @@ footer{
         justify-content: center;
         align-items: center;
         gap: 7px;
+    }
+
+    /* ========================================= WEATHER MAIN SECTION ========================================= */
+
+    .weather-section {
+        width: 90%;
+        border-radius: 35px;
+        background: rgba(255, 255, 255, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        box-shadow: 0 15px 45px rgba(10, 43, 95, 0.18);
+    }
+
+
+    /* ========================================= WELCOME MESSAGE ========================================= */
+
+    .welcome-message {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .welcome-message h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: black;
+        margin: 0 0 12px;
+        letter-spacing: -1.5px;
+    }
+
+    .welcome-message p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+        line-height: 1.7;
+    }
+
+
+    /* ========================================= DASHBOARD CONTENT ========================================= */
+
+    .dashboard-content {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    /* ========================================= CURRENT WEATHER CARD ======================================== */
+
+    .current-weather-card {
+        flex: 1;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+    }
+
+
+    .weather-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weather-icon i {
+        font-size: 6.5rem;
+        color: #087bff;
+    }
+
+
+    .weather-info {
+        text-align: center;
+    }
+
+    .weather-info h2 {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #071b43;
+        margin: 0 0 10px;
+    }
+
+    .weather-info p {
+        font-size: 2.25rem;
+        font-weight: 600;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* ========================================= LAST VISIT CARD ========================================= */
+
+    .last-visit-card {
+        margin-top: 1%;
+        flex: 1;
+        min-height: 180px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
+    }
+
+
+    /* LAST VISIT TITLE */
+
+    .last-visit-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    .last-visit-heading i {
+        font-size: 2.8rem;
+        color: #087bff;
+    }
+
+    .last-visit-heading h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* LAST VISIT TEXT */
+
+    .last-visit-card p {
+        font-size: 1.4rem;
+        font-weight: 800;
+        line-height: 2;
+        color: black;
+        margin: 0;
+    }
+
+
+    /* ========================================= WEATHER FOOTER ========================================= */
+
+    .weather-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+        margin-top: 1px;
+        background: transparent;
     }
 
     

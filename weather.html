@@ -6,18 +6,145 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="icon" type="image/png" href="assets/image/icon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>Omar Dembele - Portifolio</title>
 </head>
-<body>
-    <header class="header-expense">
-        <h2>Weather APP</h2>
-        <a href="explore.html#projects" class="back-icon">
-            <i class="fas fa-arrow-left"></i>
-        </a>
+<body class="weather-body">
+
+    <!-- WEATHER HEADER -->
+    <header class="weather-header" id="header-weather" style="display: none;">
+
+        <!-- BRAND -->
+        <div class="weather-brand">
+            <img src="assets/image/weather.avif" alt="WeatherNow">
+            <h2>Weather<span>Now</span></h2>
+        </div>
+
+        <!-- LOCATION -->
+        <div class="location-badge">
+            <i class="uil uil-location-point"></i>
+            <span id="cityWeather"></span>
+        </div>
+
     </header>
 
-    <section class="home">
-        
+    <!-- WEATHER FORM -->
+    <section class="welcome-section" id="name-weather-form">
+
+        <div class="welcome-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <i class="uil uil-cloud-sun"></i>
+                <span>Weather<span class="logo-blue">Now</span></span>
+            </div>
+
+            <!-- Welcome content -->
+            <div class="welcome-content">
+
+                <h1>Welcome!</h1>
+                <p class="welcome-subtitle">What's your name?</p>
+
+                <!-- Name form -->
+                <form id="nameForm">
+
+                    <div class="name-input">
+                        <i class="uil uil-user"></i>
+
+                        <input
+                            type="text"
+                            id="nameInput"
+                            placeholder="Enter your name..."
+                            autocomplete="given-name"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="continue-btn">
+                        Continue
+                        <i class="uil uil-arrow-right"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="welcome-footer">
+                <span>Stay ahead of the weather</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WEATHER MAIN SECTION -->
+    <section class="weather-section" id="weather-section" style="display: none;">
+
+        <!-- WELCOME -->
+        <div class="welcome-message">
+
+            <h1 id="greetingText">
+                <span id="displayName"></span>! 👋
+            </h1>
+
+            <p id="weatherGreeting">
+                It's <span id="currentTime">09:24:17 AM EST</span>
+                on <span id="currentDate">11/24/2025</span>,
+                and it's <span id="weatherText"></span> right now.
+            </p>
+
+        </div>
+
+
+        <!-- WEATHER & LAST VISIT -->
+        <div class="dashboard-content">
+
+            <!-- WEATHER CARD -->
+            <div class="current-weather-card">
+
+                <div class="weather-icon">
+                    <i class="uil uil-cloud-sun"></i>
+                </div>
+
+                <div class="weather-info">
+                    <h2 id="temperature"></h2>
+                    <p id="weatherDescription"></p>
+                </div>
+
+            </div>
+
+
+            <!-- LAST VISIT CARD -->
+            <div class="last-visit-card">
+
+                <div class="last-visit-heading">
+                    <i class="uil uil-clock"></i>
+                    <h3>Last Visit</h3>
+                </div>
+
+                <p id="lastVisit">
+                    
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="weather-footer">
+
+            <span class="footer-line"></span>
+
+            <i class="uil uil-cloud"></i>
+
+            <p>Stay ahead of the weather</p>
+
+            <span class="footer-line"></span>
+
+        </footer>
+
     </section>
 
     <script src="assets/js/index.js"></script>

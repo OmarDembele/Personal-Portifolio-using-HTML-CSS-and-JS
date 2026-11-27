@@ -824,8 +824,6 @@ if(bookButton && bookHint) {
 }
 
 
-
-
 ///////////// SEND AN EMAIL THROUGH CONTACT SECTION
 
 const btn = document.getElementById("send_btn");
@@ -834,55 +832,325 @@ console.log("Button:", btn);
 if(btn) {
     btn.addEventListener("click", function () {
 
-    const name = document.getElementById("name_contact").value.trim();
-    const email = document.getElementById("email_contact").value.trim();
-    const message = document.getElementById("message_contact").value.trim();
+        const name = document.getElementById("name_contact").value.trim();
+        const email = document.getElementById("email_contact").value.trim();
+        const message = document.getElementById("message_contact").value.trim();
 
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill in all fields.");
-        return;
-    }
-
-    const data = {
-        name: name,
-        email: email,
-        message: message
-    };
-
-    fetch("https://formsubmit.co/ajax/omardembele821@gmail.com", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Failed to send the message.");
+        if (name === "" || email === "" || message === "") {
+            alert("Please fill in all fields.");
+            return;
         }
-        return response.json();
-    })
-    .then(result => {
-        console.log("FormSubmit response:", result);
-        alert("Your message has been sent successfully!");
 
-        document.getElementById("name_contact").value = "";
-        document.getElementById("email_contact").value = "";
-        document.getElementById("message_contact").value = "";
+        const data = {
+            name: name,
+            email: email,
+            message: message
+        };
 
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Something went wrong. Your message was not sent.");
+        fetch("https://formsubmit.co/ajax/omardembele821@gmail.com", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to send the message.");
+            }
+            return response.json();
+        })
+        .then(result => {
+            console.log("FormSubmit response:", result);
+            alert("Your message has been sent successfully!");
+
+            document.getElementById("name_contact").value = "";
+            document.getElementById("email_contact").value = "";
+            document.getElementById("message_contact").value = "";
+
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Something went wrong. Your message was not sent.");
+        });
+
     });
-
-});
 }
 
-/* =====================================================================
-                                            RESPONSIVE
-   ==================================================================== */
+
+/* ========================SELECT HTML ELEMENTS =================================== */
+
+// Name page
+const nameSection = document.getElementById("name-weather-form");
+const nameForm = document.getElementById("nameForm");
+const nameInput = document.getElementById("nameInput");
+
+// Weather page
+const weatherSection = document.getElementById("weather-section");
+const headerWeather = document.getElementById("header-weather");
+
+// Greeting, date and time
+const greetingText = document.getElementById("greetingText");
+const displayName = document.getElementById("displayName");
+const currentTime = document.getElementById("currentTime");
+const currentDate = document.getElementById("currentDate");
+
+// Weather information
+const cityWeather = document.getElementById("cityWeather");
+const temperature = document.getElementById("temperature");
+const weatherDescription = document.getElementById("weatherDescription");
+const weatherText = document.getElementById("weatherText");
+const previousVisit = localStorage.getItem("lastVisit");
+
+
+/* ============================API CONFIGURATION & WEATHER DATA =========================================== */
+
+const url = "https://api.open-meteo.com/v1/forecast?latitude=42.3314&longitude=-83.0458&current=temperature_2m,weather_code&timezone=America%2FDetroit";
+
+const weatherDescriptions = {
+    0: "clear sky",
+    1: "mainly clear",
+    2: "partly cloudy",
+    3: "overcast",
+
+    45: "fog",
+    48: "depositing rime fog",
+
+    51: "light drizzle",
+    53: "moderate drizzle",
+    55: "dense drizzle",
+    56: "light freezing drizzle",
+    57: "dense freezing drizzle",
+
+    61: "slight rain",
+    63: "moderate rain",
+    65: "heavy rain",
+    66: "light freezing rain",
+    67: "heavy freezing rain",
+
+    71: "slight snowfall",
+    73: "moderate snowfall",
+    75: "heavy snowfall",
+    77: "snow grains",
+
+    80: "slight rain showers",
+    81: "moderate rain showers",
+    82: "violent rain showers",
+
+    85: "light snow showers",
+    86: "heavy snow showers",
+
+    95: "thunderstorm",
+    96: "thunderstorm with slight hail",
+    99: "thunderstorm with heavy hail"
+};
+
+
+/* ==================================GREETING FUNCTIONS ================================== */
+
+function getGreeting() {
+
+    const hour = Number(
+        new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/Detroit",
+            hour: "numeric",
+            hourCycle: "h23"
+        }).format(new Date())
+    );
+
+    if (hour < 12) {
+        return "Good morning";
+    }
+    else if (hour < 18) {
+        return "Good afternoon";
+    }
+    else {
+        return "Good evening";
+    }
+}
+
+
+/* ========================================================= DATE & TIME FUNCTIONS ========================================= */
+
+function getCurrentDateTime() {
+
+    const now = new Date();
+
+    const time = now.toLocaleTimeString("en-US", {
+        timeZone: "America/Detroit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+        timeZoneName: "short"
+    });
+
+    const date = now.toLocaleDateString("en-US", {
+        timeZone: "America/Detroit",
+        month: "2-digit",
+        day: "2-digit",
+        year: "numeric"
+    });
+
+    return {
+        time: time,
+        date: date
+    };
+}
+
+
+/* ========================================================= WEATHER HELPER FUNCTIONS =========================================== */
+
+// Map weather code to description
+
+function mapWeatherCodeToDescription(code) {
+    return weatherDescriptions[code] || "unknown";
+}
+
+
+// ====================================== DISPLAY LAST VISIT ======================================
+
+function displayLastVisit() {
+
+    const previousVisit = localStorage.getItem("lastVisit");
+
+    if (previousVisit) {
+
+        const lastDate = new Date(previousVisit);
+
+        const formattedDate = lastDate.toLocaleString("en-US", {
+            timeZone: "America/Detroit",
+            month: "2-digit",
+            day: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true,
+            timeZoneName: "short"
+        });
+
+        lastVisit.textContent = `Btw, you last visited on ${formattedDate}.`;
+
+    } else {
+
+        lastVisit.textContent = "Welcome! This is your first visit.";
+
+    }
+
+    localStorage.setItem("lastVisit", new Date().toISOString());
+}
+
+
+/* ====================================FETCH WEATHER DATA ================================== */
+
+async function fetchWeather() {
+
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=42.3314&longitude=-83.0458&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FDetroit";
+
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch weather data");
+        }
+
+        const data = await response.json();
+
+        const temperatureValue = data.current.temperature_2m;
+        const weatherCode = data.current.weather_code;
+        cityWeather.innerHTML = data.timezone.split("/").reverse();
+        temperature.textContent = temperatureValue+"°F";
+        const description = mapWeatherCodeToDescription(weatherCode); 
+        weatherDescription.textContent = description;
+        weatherText.textContent = description;
+
+        return {
+            temperature: temperatureValue,
+            weatherCode: weatherCode,
+            timezone: timezone,
+            description: description
+        };
+
+    } catch (error) {
+        console.error("Weather error:", error);
+        return null;
+    }
+}
+
+
+/* ================================DISPLAY WEATHER PAGE ====================================== */
+
+function showWeatherPage() {
+
+    nameSection.style.display = "none";
+    headerWeather.style.display = "flex";
+    weatherSection.style.display = "block";
+}
+
+
+/* ===============================UPDATE GREETING, DATE AND TIME ================================== */
+
+function updateGreetingDateTime() {
+
+    const user = localStorage.getItem("userName");
+    const greeting = getGreeting();
+    const dateTime = getCurrentDateTime();
+
+    greetingText.textContent = greeting +", " + user.toUpperCase();
+    currentTime.textContent = dateTime.time;
+    currentDate.textContent = dateTime.date;
+}
+
+
+/* ========================================== NAME FORM & LOCAL STORAGE ========================================= */
+
+// Check localStorage
+
+const savedName = localStorage.getItem("userName");
+
+// Check if a name already exists
+
+if (savedName) {
+    showWeatherPage(savedName);
+    fetchWeather();
+    updateGreetingDateTime();
+    displayLastVisit();
+} else {
+    nameSection.style.display = "flex";
+}
+
+
+// Listen for form submission
+
+nameForm.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    const name = nameInput.value.trim();
+
+    if (!name) return;
+
+    // Save name
+
+    localStorage.setItem("userName", name);
+
+    // Show weather page
+
+    showWeatherPage(name);
+    fetchWeather();
+    updateGreetingDateTime();
+    displayLastVisit();
+});
+
+
+/* ============================================== RUN & UPDATE ========================================= */
+
+setInterval(updateGreetingDateTime, 1000);
+
+
+/*  ==================================================RESPONSIVE ============================================= */
 
 const navRight = document.getElementById("navRight");
 const navbar = document.getElementById("navbar");
