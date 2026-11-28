@@ -1,5 +1,5 @@
 
-/* ========================== VARIABLES ================================= */
+/* ================= VARIABLES ================= */
 
 :root{
     --body-color: rgb(250,250,250);
@@ -23,7 +23,7 @@
     font-family: 'Poppins', 'sans serif';
 }
 
-/* ========================== SMOOTH SCROLL ================================= */
+/* ================= SMOOTH SCROLL ================= */
 
 html{
     scroll-behavior: smooth;
@@ -46,7 +46,7 @@ html{
     border-radius: 30px;
 }
 
-/* ========================== BASE ================================= */
+/* ================= BASE ================= */
 
 body{
     background: var(--body-color);
@@ -83,7 +83,7 @@ body{
     color: var(--color-white);   
 }
 
-/* ========================== MAIN HEADER SECTION in page index.html ================================= */
+/* ================= MAIN HEADER SECTION in page index.html ================= */
 
 .header {
     position: fixed;
@@ -136,7 +136,7 @@ body{
     display: none;
 }
 
-/* ==========================  HERO Section in page index.html ================================= */
+/* =================  HERO Section in page index.html ================= */
 
 .hero {
     min-height: 80vh;
@@ -183,7 +183,7 @@ body{
     border: 2px solid var(--first-color);
 }
 
-/* ==========================  Journeys Section in page index.html ================================= */
+/* =================  Journeys Section in page index.html ================= */
 
 .journey {
     margin-top: -5%;
@@ -228,7 +228,7 @@ body{
     margin-bottom: 15px;
 }
 
-/* ==========================  Classes Section in page index.html ================================= */
+/* =================  Classes Section in page index.html ================= */
 
 .my-classes {
     padding: 30px 8%;
@@ -273,11 +273,37 @@ body{
     text-decoration: none;
 }
 
+/* Status */
+.status {
+    padding: 2% 10% 2% 10%;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Completed */
+.status.completed {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* In Progress */
+.status.in-progress {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Upcoming */
+.status.upcoming {
+    background: #e5e7eb;
+    color: #374151;
+}
+
 .classes-table a:hover {
     text-decoration: underline;
 }
 
-/* ==========================  Favorites & Goals Section in page index.html ================================= */
+/* =================  Favorites & Goals Section in page index.html ================= */
 
 /*-------------Favorite ----------------- */
 .favorite-goals {
@@ -360,7 +386,7 @@ body{
     font-size: 1rem;
 }
 
-/* ==========================  BLOG SECTION in page blog.html ================================= */
+/* =================  BLOG SECTION in page blog.html ================= */
 
 .video-content {
     margin-top: 5%;
@@ -402,7 +428,7 @@ body{
     border-radius: 1.2rem;
     display: block;
 }
-/* ==========================  BLOG Projects in page blog.html ================================= */
+/* =================  BLOG Projects in page blog.html ================= */
 
 .section-blog {
     margin-top: 2%;
@@ -417,7 +443,7 @@ body{
     flex-wrap: wrap;
 }
 
-/* ==========================  Academics SECTION in page explore.html ================================= */
+/* =================  Academics SECTION in page explore.html ================= */
 
 .academics {
     padding: 30px 8%;
@@ -536,7 +562,7 @@ body{
     width: 65%;
 }
 
-/* ==========================  Personals Projects SECTION in page explore.html ================================= */
+/* =================  Personals Projects SECTION in page explore.html ================= */
 
 .section-project {
     padding: 30px 8%;
@@ -626,7 +652,7 @@ body{
     background: var(--second-color);
 }
 
-/* ============================== INTEREST SECTION page explore.html ================================= */
+/* ================= INTEREST SECTION page explore.html ================= */
 
 .interest-section {
     padding: 30px 8%;
@@ -686,7 +712,7 @@ body{
 }
 
 
-/* ============================== MY READS Section in page explore.html ================================ */
+/* ================= MY READS Section in page explore.html ================= */
 
 .reads {
     display: flex;
@@ -807,7 +833,7 @@ body{
 }
 
 
-/* =================== MY TOOLBOX in page explore.html ========================= */
+/* ================= MY TOOLBOX in page explore.html ================= */
 
 .toolbox {
     display: flex;
@@ -820,7 +846,7 @@ body{
 }
 
 
-/* ================== MARQUEE in page explore.html ========================= */
+/* ================= MARQUEE in page explore.html ================= */
 
 .marquee {
     position: absolute;
@@ -938,7 +964,7 @@ body{
     text-align: center;
 }
 
-/* ============================ BEYOND THE CODE in page explore.html============================ */
+/* ================= BEYOND THE CODE in page explore.html ================= */
 
 .interest-content2 {
     margin-top: 0.5%;
@@ -997,7 +1023,7 @@ body{
 }
 
 
-/* ======================= HOBBIES LAYOUT in page explore.html ======================== */
+/* ================= HOBBIES LAYOUT in page explore.html ================= */
 
 .hobbies {
     position: absolute;
@@ -1012,7 +1038,7 @@ body{
 }
 
 
-/* ================== HOBBY BADGES in page explore.html ================== */
+/* ================= HOBBY BADGES in page explore.html ================= */
 
 .hobby {
     display: flex;
@@ -1039,7 +1065,7 @@ body{
 }
 
 
-/* =================== HOBBY POSITIONS in page explore.html =================== */
+/* ================= HOBBY POSITIONS in page explore.html ================= */
 
 .gaming {
     grid-column: 3 / 6;
@@ -1084,14 +1110,14 @@ body{
 }
 
 
-/* ============================ HOVER in page explore.html ============= */
+/* ================= HOVER in page explore.html ================= */
 
 .hobby:hover {
     transform: translateY(-3px);
     filter: brightness(1.08);
 }
 
-/* ======================== LOCATION MAP in page explore.html ====================== */
+/* ================= LOCATION MAP in page explore.html ================= */
 
 .location {
     position: relative;
@@ -1169,7 +1195,7 @@ body{
     color: #e0e5ec;
 }
 
-/* ======================== Details Projects in page detail.html ====================== */
+/* ================= Details Projects in page detail.html ================= */
 
 .details-section {
     margin-top: 8%;
@@ -1213,7 +1239,7 @@ body{
     margin-top: 3.5%;
 }
 
-/* ======================== Explore First Section in page explore.html ====================== */
+/* ================= Explore First Section in page explore.html ================= */
 .explore {
     display: flex;
     align-items: center;
@@ -1306,7 +1332,7 @@ body{
     transform: translateY(-3px);
 }
 
-/* ======================== Contact in page contact.html ====================== */
+/* ================= Contact in page contact.html ================= */
 
 .top-header{
     margin-top: 2em;
@@ -1323,7 +1349,7 @@ body{
     color: #999;
 }
 
-/* ======================== Contact Box in page contact.html ====================== */
+/* ================= Contact Box in page contact.html ================= */
 
 .contact {
     display: flex;
@@ -1419,7 +1445,7 @@ span {
     width: 50%;
 }
 
-/* ======================== Contact Form in page contact.html ====================== */
+/* ================= Contact Form in page contact.html ================= */
 
 .form-control{
     display: flex;
@@ -1470,7 +1496,7 @@ textarea{
     font-size: 18px;
 }
 
-/* ======================== Expense Tracker Project in page expense.html ====================== */
+/* ================= Expense Tracker Project in page expense.html ================= */
 
 .header-expense {
     position: fixed;
@@ -1631,7 +1657,7 @@ input[type="number"] {
     background-color: darkred;
 }
 
-/* ======================== TODO LIST Projects in page todo_list.html ====================== */
+/* ================= TODO LIST Projects in page todo_list.html ================= */
 
 .container-todo {
     width: 50%;
@@ -1819,7 +1845,7 @@ input[type="number"] {
 
 
 
-/* ======================= WEATHER HEADER SECTION in page weather.html ============================= */
+/* ================= WEATHER HEADER SECTION in page weather.html ================= */
 
 .weather-body {
     background: url("../image/weather_background.jpg") center / cover no-repeat fixed;
@@ -1879,7 +1905,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= WEATHER MAIN SECTION in page weather.html ========================================= */
+/* ================= WEATHER MAIN SECTION in page weather.html ================= */
 
 .weather-section {
     width: 60%;
@@ -1892,7 +1918,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= WELCOME MESSAGE in page weather.html ========================================= */
+/* ================= WELCOME MESSAGE in page weather.html ================= */
 
 .welcome-message {
     text-align: center;
@@ -1916,7 +1942,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= DASHBOARD CONTENT in page weather.html ========================================= */
+/* ================= DASHBOARD CONTENT in page weather.html ================= */
 
 .dashboard-content {
     display: flex;
@@ -1927,7 +1953,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= CURRENT WEATHER CARD in page weather.html ======================================== */
+/* ================= CURRENT WEATHER CARD in page weather.html ================= */
 
 .current-weather-card {
     flex: 1;
@@ -1976,7 +2002,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= LAST VISIT CARD in page weather.html ========================================= */
+/* ================= LAST VISIT CARD in page weather.html ================= */
 
 .last-visit-card {
     flex: 1;
@@ -2020,7 +2046,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= WEATHER FOOTER in page weather.html ========================================= */
+/* ================= WEATHER FOOTER in page weather.html ================= */
 
 .weather-footer {
     display: flex;
@@ -2051,7 +2077,7 @@ input[type="number"] {
 }
 
 
-/* ========================================= FOOTER BOX ========================================= */
+/* ================= FOOTER BOX ================= */
 
 footer{
     display: flex;
@@ -2138,11 +2164,9 @@ footer{
 
 
 
-/* =====================================================================
-                                            RESPONSIVE
-    ==================================================================== */
+/* =========================================== RESPONSIVE ================================================ */
 
-/*----------------MEDIA QUERY == 100 UNTIL 399 / RESPONSIVE---------- */
+/* ================= MEDIA QUERY == 100 UNTIL 399 / RESPONSIVE ================= */
 
 @media (min-width: 100px) and (max-width: 399px) {
     .header {
@@ -2200,7 +2224,7 @@ footer{
         z-index: 1001;
     }
 
-    /* -------- HERO Section -------- */
+    /* ================= HERO Section ================= */
 
     .hero {
         min-height: 100vh;
@@ -2249,7 +2273,6 @@ footer{
         width: 100%;
     }
 
-    /* Image */
     .hero-image img {
         width: 250px;
         height: 250px;
@@ -2258,7 +2281,7 @@ footer{
         border: 2px solid var(--first-color);
     }
 
-    /* -------- Journeys Section -------- */
+    /* ================= Journeys Section ================= */
 
     .journey {
         margin-top: -5%;
@@ -2299,7 +2322,7 @@ footer{
     }
 
     
-    /* -------- Classes Section -------- */
+    /* ================= Classes Section ================= */
     .my-classes {
         padding: 30px 8%;
     }
@@ -2349,7 +2372,7 @@ footer{
 
 
     
-    /* -------- Favorites & Goals Section -------- */
+    /* ================= Favorites & Goals Section ================= */
 
     .favorite-goals {
         display: block;
@@ -2363,7 +2386,7 @@ footer{
         margin-top: 10%;
     }
 
-    /*--------------- Explore Section -----------------*/
+    /* ================= Explore Section ================= */
     .explore {
         display: flex;
         align-items: center;
@@ -2410,16 +2433,14 @@ footer{
     }
 
 
-    /* -------------- Academics Section -------------------*/
+    /* ================= Academics Section ================= */
 
-    /* ACADEMIC SECTION */
     .academic-section {
         background: #0a1018;
         color: #f5f5f5;
         padding: 60px 8%;
     }
 
-    /* EDUCATION */
     .education h2,
     .skills-content h2 {
         font-size: 20px;
@@ -2427,7 +2448,6 @@ footer{
         margin-bottom: 15px;
     }
 
-    /* EDUCATION CARD */
     .education-card h3 {
         font-size: 16px;
         margin-bottom: 10px;
@@ -2440,8 +2460,6 @@ footer{
         padding-left: 4%;
     }
 
-
-    /* SKILLS SECTION */
     .academic-skills {
         display: block;
         align-items: center;
@@ -2449,14 +2467,13 @@ footer{
         margin-top: 25px;
     }
 
-    /* LEFT IMAGE */
     .skills-image {
         width: 100%;
         align-items: center;
     }
 
 
-    /* ============================== INTEREST SECTION ================================= */
+    /* ================= INTEREST SECTION ================= */
 
     .interest-content {
         display: block;
@@ -2508,7 +2525,6 @@ footer{
         margin: 0;
     }
 
-    /* Each list */
     .tool-list {
         display: flex;
         align-items: center;
@@ -2517,8 +2533,6 @@ footer{
         flex-shrink: 0;
     }
 
-
-    /* Technology icon */
     .tool-icon {
         display: flex;
         align-items: center;
@@ -2530,8 +2544,6 @@ footer{
         color: #55d9c4;
     }
 
-
-    /* JavaScript icon */
     .tool-icon.js a{
         border-radius: 7px;
         background: #56d9c4;
@@ -2541,9 +2553,8 @@ footer{
         font-weight: 800;
     }
 
-    /* -------------- Projects Section -------------------*/
+    /* ================= Projects Section ================= */
 
-    /* Projects Section */
     .section-project {
         width: 100%;
         box-sizing: border-box;
@@ -2581,7 +2592,7 @@ footer{
         border-radius: 10px 10px 0 0;
     }
 
-/* ============================ BEYOND THE CODE ============================ */
+    /* ================= BEYOND THE CODE ================= */
 
     .interest-content2 {
         display: block;
@@ -2590,7 +2601,7 @@ footer{
     }
 
 
-    /* ============================ HOBBIES LAYOUT ============================ */
+    /* ================= HOBBIES LAYOUT ================= */
 
     .hobbies {
         display: flex;
@@ -2601,7 +2612,7 @@ footer{
     }
 
 
-    /* ============================ HOBBY BADGES ============================ */
+    /* ================= HOBBY BADGES ================= */
 
     .hobby {
         display: block;
@@ -2628,7 +2639,7 @@ footer{
     }
 
 
-    /* ============================ LOCATION MAP ============================ */
+    /* ================= LOCATION MAP ================= */
 
     .location {
         margin-top: 1%;
@@ -2643,7 +2654,7 @@ footer{
     }
 
 
-    /*-------------FOOTER --------------*/
+    /* ================= FOOTER ================= */
     .bottom-footer{
         font-size: 12px;
         margin-top: 1%;
@@ -2651,7 +2662,7 @@ footer{
     }
 
 
-    /* ---------------- BLOG SECTION -------------*/
+    /* ================= BLOG SECTION ================= */
 
     .video-content {
         margin-top: 5%;
@@ -2685,7 +2696,7 @@ footer{
     }
 
 
-    /*------------------- Blog Projects Section ----------------*/
+    /* ================= Blog Projects Section ================= */
 
     .section-blog {
         margin-top: 2%;
@@ -2701,7 +2712,7 @@ footer{
     }
 
 
-    /*----------------- Contact ----------------*/
+    /* ================= Contact ================= */
 
     .top-header{
         margin-top: 2em;
@@ -2710,7 +2721,7 @@ footer{
     }
 
 
-    /*----------------- CONTACT BOX ----------------*/
+    /* ================= CONTACT BOX ================= */
 
     .contact {
         display: block;
@@ -2754,7 +2765,7 @@ footer{
 
 
 
-    /*----------------- CONTACT FORM ----------------*/
+    /* ================= CONTACT FORM ================= */
     .form-control{
         display: flex;
         flex-direction: column;
@@ -2779,7 +2790,6 @@ footer{
         width: 55%;
     }
 
-    /* Image */
     .contact .hero-image img {
         width: 250px;
         height: 250px;
@@ -2789,14 +2799,13 @@ footer{
     }
 
     
-    /* ========================================= WELCOME WEATHER SCREEN ========================================= */
+    /* ================= WELCOME WEATHER SCREEN ================= */
 
-    /* Logo */
     .welcome-container .logo {
         display: none;
     }
 
-    /* ========================================= WEATHER HEADER SECTION ========================================= */
+    /* ================= WEATHER HEADER SECTION ================= */
 
     .weather-header {
         display: block;
@@ -2810,7 +2819,7 @@ footer{
         justify-content: center;
     }
 
-    /* ========================================= WEATHER MAIN SECTION ========================================= */
+    /* ================= WEATHER MAIN SECTION ================= */
 
     .weather-section {
         width: 90%;
@@ -2821,7 +2830,7 @@ footer{
     }
 
 
-    /* ========================================= WELCOME MESSAGE ========================================= */
+    /* ================= WELCOME MESSAGE ================= */
 
     .welcome-message {
         text-align: center;
@@ -2845,7 +2854,7 @@ footer{
     }
 
 
-    /* ========================================= DASHBOARD CONTENT ========================================= */
+    /* ================= DASHBOARD CONTENT ================= */
 
     .dashboard-content {
         display: block;
@@ -2855,7 +2864,7 @@ footer{
     }
 
 
-    /* ========================================= CURRENT WEATHER CARD ======================================== */
+    /* ================= CURRENT WEATHER CARD ================= */
 
     .current-weather-card {
         flex: 1;
@@ -2904,7 +2913,7 @@ footer{
     }
 
 
-    /* ========================================= LAST VISIT CARD ========================================= */
+    /* ================= LAST VISIT CARD ================= */
 
     .last-visit-card {
         margin-top: 1%;
@@ -2919,9 +2928,6 @@ footer{
         border: 1px solid rgba(255, 255, 255, 0.35);
         box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
     }
-
-
-    /* LAST VISIT TITLE */
 
     .last-visit-heading {
         display: flex;
@@ -2942,9 +2948,6 @@ footer{
         margin: 0;
     }
 
-
-    /* LAST VISIT TEXT */
-
     .last-visit-card p {
         font-size: 1.4rem;
         font-weight: 800;
@@ -2954,7 +2957,7 @@ footer{
     }
 
 
-    /* ========================================= WEATHER FOOTER ========================================= */
+    /* ================= WEATHER FOOTER ================= */
 
     .weather-footer {
         display: flex;
@@ -2964,8 +2967,6 @@ footer{
         margin-top: 1px;
         background: transparent;
     }
-
-
 }
 
 
@@ -3031,7 +3032,6 @@ footer{
 
     /* -------- HERO Section -------- */
 
-    /* Hero section */
     .hero {
         min-height: 100vh;
         display: flex;
@@ -3043,14 +3043,12 @@ footer{
         margin-top: 5%;
     }
 
-    /* Text container */
     .hero-text {
         max-width: 600px;
         text-align: center;
         justify-content: center;
     }
 
-    /* Main title */
     .hero-text h1 {
         font-size: 2.5rem;
         font-weight: 700;
@@ -3062,13 +3060,11 @@ footer{
         color: var(--first-color);
     }
 
-    /* Subtitle */
     .hero-text h3 {
         font-size: 18px;
         margin-bottom: 20px;
     }
 
-    /* Description */
     .hero-text p {
         font-size: 1.6rem;
         font-style: italic;
@@ -3076,7 +3072,6 @@ footer{
         margin-bottom: 30px;
     }
 
-    /* Image */
     .hero-image img {
         text-align: center;
         justify-content: center;
@@ -3088,7 +3083,7 @@ footer{
         border: 2px solid var(--first-color);
     }
 
-    /* -------------- Projects Section -------------------*/
+    /* ================= Projects Section ================= */
 
     .section-project {
         padding: 30px 8%;
@@ -3105,7 +3100,7 @@ footer{
     }
 
     
-    /* ============================== INTEREST SECTION ================================= */
+    /* ================= INTEREST SECTION ================= */
 
     .interest-content {
         display: block;
@@ -3157,7 +3152,6 @@ footer{
         margin: 0;
     }
 
-    /* Each list */
     .tool-list {
         display: flex;
         align-items: center;
@@ -3166,8 +3160,6 @@ footer{
         flex-shrink: 0;
     }
 
-
-    /* Technology icon */
     .tool-icon {
         display: flex;
         align-items: center;
@@ -3179,8 +3171,6 @@ footer{
         color: #55d9c4;
     }
 
-
-    /* JavaScript icon */
     .tool-icon.js a{
         border-radius: 7px;
         background: #56d9c4;
@@ -3191,7 +3181,7 @@ footer{
     }
     
 
-/* ============================ BEYOND THE CODE ============================ */
+    /* ================= BEYOND THE CODE ================= */
 
     .interest-content2 {
         display: block;
@@ -3201,7 +3191,7 @@ footer{
     }
 
 
-    /* ============================ HOBBIES LAYOUT ============================ */
+    /* ================= HOBBIES LAYOUT ================= */
 
     .hobbies {
         display: flex;
@@ -3212,7 +3202,7 @@ footer{
     }
 
 
-    /* ============================ HOBBY BADGES ============================ */
+    /* ================= HOBBY BADGES ================= */
 
     .hobby {
         display: block;
@@ -3237,8 +3227,7 @@ footer{
             filter 0.3s ease;
     }
 
-
-    /* ============================ LOCATION MAP ============================ */
+    /* ================= LOCATION MAP ================= */
 
     .location {
         margin-top: 1%;
@@ -3255,7 +3244,7 @@ footer{
 
 
 
-    /* ---------------- BLOG SECTION -------------*/
+    /* ================= BLOG SECTION ================= */
 
     .video-content {
         margin-top: 5%;
@@ -3297,7 +3286,7 @@ footer{
         flex-wrap: wrap;
     }
 
-    /*----------------- Contact ----------------*/
+    /* ================= Contact ================= */
 
     .top-header{
         margin-top: 2em;
@@ -3306,7 +3295,7 @@ footer{
     }
 
 
-    /*----------------- CONTACT BOX ----------------*/
+    /* ================= CONTACT BOX ================= */
 
     .contact {
         display: block;
@@ -3350,7 +3339,7 @@ footer{
 
 
 
-    /*----------------- CONTACT FORM ----------------*/
+    /* ================= CONTACT FORM ================= */
     .form-control{
         display: flex;
         flex-direction: column;
@@ -3370,7 +3359,6 @@ footer{
 
      /* ========== WELCOME WEATHER SCREEN ========== */
 
-    /* Logo */
     .welcome-container .logo {
         display: flex;
         text-align: center;
@@ -3385,7 +3373,7 @@ footer{
         margin-top: 15%;
     }
 
-    /* ========================================= WEATHER MAIN SECTION ========================================= */
+    /* ================= WEATHER MAIN SECTION ================= */
 
     .weather-section {
         width: 90%;
@@ -3396,7 +3384,7 @@ footer{
     }
 
 
-    /* ========================================= WELCOME MESSAGE ========================================= */
+    /* ================= WELCOME MESSAGE ================= */
 
     .welcome-message {
         text-align: center;
@@ -3420,7 +3408,7 @@ footer{
     }
 
 
-    /* ========================================= DASHBOARD CONTENT ========================================= */
+    /* ================= DASHBOARD CONTENT ================= */
 
     .dashboard-content {
         display: block;
@@ -3430,7 +3418,7 @@ footer{
     }
 
 
-    /* ========================================= CURRENT WEATHER CARD ======================================== */
+    /* ================= CURRENT WEATHER CARD ================= */
 
     .current-weather-card {
         flex: 1;
@@ -3479,7 +3467,7 @@ footer{
     }
 
 
-    /* ========================================= LAST VISIT CARD ========================================= */
+    /* ================= LAST VISIT CARD ================= */
 
     .last-visit-card {
         margin-top: 1%;
@@ -3494,9 +3482,6 @@ footer{
         border: 1px solid rgba(255, 255, 255, 0.35);
         box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
     }
-
-
-    /* LAST VISIT TITLE */
 
     .last-visit-heading {
         display: flex;
@@ -3517,9 +3502,6 @@ footer{
         margin: 0;
     }
 
-
-    /* LAST VISIT TEXT */
-
     .last-visit-card p {
         font-size: 1.4rem;
         font-weight: 800;
@@ -3529,7 +3511,7 @@ footer{
     }
 
 
-    /* ========================================= WEATHER FOOTER ========================================= */
+    /* ================= WEATHER FOOTER ================= */
 
     .weather-footer {
         display: flex;
@@ -3546,7 +3528,7 @@ footer{
 
 @media (min-width: 590px) and (max-width: 768px) {
 
-    /* -------- HERO Section -------- */
+    /* ================= HERO Section ================= */
 
     .hero {
         min-height: 80vh;
@@ -3558,12 +3540,10 @@ footer{
         margin-top: 10%;
     }
 
-    /* Text container */
     .hero-text {
         max-width: 700px;
     }
 
-    /* Main title */
     .hero-text h1 {
         font-size: 2.5rem;
         font-weight: 700;
@@ -3580,7 +3560,6 @@ footer{
         margin-bottom: 20px;
     }
 
-    /* Image */
     .hero-image img {
         width: 300px;
         height: 300px;
@@ -3590,7 +3569,7 @@ footer{
     }
 
 
-    /* -------------- Projects Section -------------------*/
+    /* ================= Projects Section ================= */
 
     .section-project {
         padding: 30px 8%;
@@ -3623,7 +3602,7 @@ footer{
         font-size: 22px;
     }
 
-    /* ============================== INTEREST SECTION ================================= */
+    /* ================= INTEREST SECTION ================= */
 
     .interest-section {
         padding: 20px 8%;
@@ -3688,9 +3667,7 @@ footer{
     }
 
 
-    /* ==============================
-    MY READS
-    ================================= */
+    /* ================= MY READS ================= */
 
     .reads {
         display: flex;
@@ -3702,7 +3679,6 @@ footer{
         padding-right: 10px;
     }
 
-    /* Book button */
     .book-button {
         position: absolute;
         left: 50%;
@@ -3716,8 +3692,6 @@ footer{
         perspective: 800px;
     }
 
-
-    /* Shadow behind book */
     .book-shadow {
         position: absolute;
         width: 142px;
@@ -3727,8 +3701,6 @@ footer{
         border-radius: 2px;
     }
 
-
-    /* Book body */
     .book-object {
         position: absolute;
         top: 0;
@@ -3756,15 +3728,12 @@ footer{
             box-shadow 0.4s ease;
     }
 
-
-    /* Top subtitle on cover */
-
     .book-top {
         height: 25px;
         flex-shrink: 0;
     }
 
-    /* ============================ BEYOND THE CODE ============================ */
+    /* ================= BEYOND THE CODE ================= */
 
     .interest-content2 {
         margin-top: 0.5%;
@@ -3793,9 +3762,7 @@ footer{
     }
 
 
-    /* ============================
-    SECTION HEADING
-    ============================ */
+    /* ================= SECTION HEADING ================= */
 
     .beyond .section-heading {
         display: flex;
@@ -3828,7 +3795,7 @@ footer{
     }
 
 
-    /* ============================ HOBBIES LAYOUT ============================ */
+    /* ================= HOBBIES LAYOUT ================= */
 
     .hobbies {
         position: absolute;
@@ -3842,7 +3809,7 @@ footer{
         gap: 7px;
     }
 
-    /* ========================================= WEATHER MAIN SECTION ========================================= */
+    /* ================= WEATHER MAIN SECTION ================= */
 
     .weather-section {
         width: 90%;
@@ -3853,7 +3820,7 @@ footer{
     }
 
 
-    /* ========================================= WELCOME MESSAGE ========================================= */
+    /* ================= WELCOME MESSAGE ================= */
 
     .welcome-message {
         text-align: center;
@@ -3877,7 +3844,7 @@ footer{
     }
 
 
-    /* ========================================= DASHBOARD CONTENT ========================================= */
+    /* ================= DASHBOARD CONTENT ================= */
 
     .dashboard-content {
         display: block;
@@ -3887,7 +3854,7 @@ footer{
     }
 
 
-    /* ========================================= CURRENT WEATHER CARD ======================================== */
+    /* ================= CURRENT WEATHER CARD ================= */
 
     .current-weather-card {
         flex: 1;
@@ -3936,7 +3903,7 @@ footer{
     }
 
 
-    /* ========================================= LAST VISIT CARD ========================================= */
+    /* ================= LAST VISIT CARD ================= */
 
     .last-visit-card {
         margin-top: 1%;
@@ -3951,9 +3918,6 @@ footer{
         border: 1px solid rgba(255, 255, 255, 0.35);
         box-shadow: 0 8px 25px rgba(17, 65, 130, 0.08);
     }
-
-
-    /* LAST VISIT TITLE */
 
     .last-visit-heading {
         display: flex;
@@ -3974,9 +3938,6 @@ footer{
         margin: 0;
     }
 
-
-    /* LAST VISIT TEXT */
-
     .last-visit-card p {
         font-size: 1.4rem;
         font-weight: 800;
@@ -3986,7 +3947,7 @@ footer{
     }
 
 
-    /* ========================================= WEATHER FOOTER ========================================= */
+    /* ================= WEATHER FOOTER ================= */
 
     .weather-footer {
         display: flex;
@@ -3996,6 +3957,5 @@ footer{
         margin-top: 1px;
         background: transparent;
     }
-
     
 }

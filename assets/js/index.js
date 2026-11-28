@@ -1,4 +1,4 @@
-/*------------------ Current Path ------------------------- */
+// * ------------------ Current Path ------------------------- *
 let currentPage = window.location.pathname;
 
 if (currentPage.includes("index.html") || currentPage === "/") {
@@ -15,7 +15,7 @@ else if (currentPage.includes("contact.html")) {
 }
 
 
-/*  ===============================RESPONSIVE ==================================== */
+// *  ===============================RESPONSIVE ==================================== *
 
 const navRight = document.getElementById("navRight");
 const navbar = document.getElementById("navbar");
@@ -43,44 +43,44 @@ if (navRight && navbar) {
     });
 }
 
-/*------------------ List of classes ------------------------- */
+// *------------------ List of classes ------------------------- *
 
 const courseList = [
     {
         id: 1,
         course: "CIS-1440",
         description: "Front-End Web Technologies",
-        link: "#"
+        status: "In Progress"
     },
     {
         id: 2,
         course: "CIS-1200",
         description: "Intro to Database Systems",
-        link: "#"
+        status: "In Progress"
     },
     {
         id: 3,
         course: "CIS-1050",
         description: "Personal Comp Prod Tools",
-        link: "#"
+        status: "Completed"
     },
     {
         id: 4,
         course: "ESL-2520",
         description: "Writing/Reading IV Acad IV",
-        link: "#"
+        status: "Completed"
     },
     {
         id: 5,
         course: "ESL-2510",
         description: "Write/Read for Acad Purp III",
-        link: "#"
+        status: "In Progress"
     },
     {
         id: 6,
         course: "ESL-2410",
         description: "Int Eng Gram & List Comm Skil",
-        link: "#"
+        status: "Completed"
     }
 ];
 
@@ -95,16 +95,16 @@ if (classesContainer) {
                 <td>${item.course}</td>
                 <td>${item.description}</td>
                 <td>
-                    <a href="${item.link}">View Details</a>
+                    <span class="status ${item.status.toLowerCase().replaceAll(" ", "-")}"> ${item.status} </span>
                 </td>
             </tr>
         `;
     }).join("");
 }
 
-/*------------------ List of education & skills -----------------**/
+// *------------------ List of education & skills -----------------*
 
-/* ================= EDUCATION DATA ================= */
+// * ================= EDUCATION DATA ================= *
 
 const educationData = [
     {
@@ -138,7 +138,7 @@ const educationData = [
 ];
 
 
-/* ================= DISPLAY EDUCATION ================= */
+// * ================= DISPLAY EDUCATION ================= *
 
 const educationContainer = document.getElementById("education-container");
 
@@ -174,7 +174,7 @@ if (educationContainer) {
 }
 
 
-/* ================= SKILLS DATA ================= */
+// * ================= SKILLS DATA ================= *
 
 const skillsData = [
     { name: "HTML & CSS", percentage: 85, className: "html" },
@@ -188,7 +188,7 @@ const skillsData = [
 ];
 
 
-/* ================= DISPLAY SKILLS ================= */
+// * ================= DISPLAY SKILLS ================= *
 
 const skillsContainer = document.getElementById("skills-container");
 
@@ -212,7 +212,7 @@ if (skillsContainer) {
 }
 
 
-/* ================= SKILLS ANIMATION ================= */
+// * ================= SKILLS ANIMATION ================= *
 
 const skillsSection = document.querySelector(".academic-skills");
 
@@ -235,7 +235,7 @@ if (skillsSection) {
 }
 
 
-/*------------------ List of information in the blog ------------------------- */
+// *================= List of information in the blog ================= *
 
 const blogs = [
     {
@@ -469,7 +469,7 @@ const blogs = [
 }
 ];
 
-/*------------------Display blog ------------------------- */
+// *=================Display blog ================= *
 
 const blogContainer = document.getElementById("blog-container");
 
@@ -487,7 +487,7 @@ if (blogContainer) {
     `).join("");
 }
 
-/*------------------Display details of blog ------------------------- */
+// *================= Display details of blog ================= *
 const detailsContainer = document.getElementById("section-details");
 
 if (detailsContainer) {
@@ -580,7 +580,7 @@ if (detailsContainer) {
     }
 }
 
-/*------------------ function to open or download cv ------------------------- */
+// *================= function to open or download cv ================= *
 function myCv() {
     window.open("assets/cv/CV_Omar_Dembele_English.pdf", "_blank");
 }
@@ -597,7 +597,7 @@ function downloadCv() {
     document.body.removeChild(link);
 }
 
-/*------------------List of information of my personal projects ------------------------- */
+// *=================List of information of my personal projects ================= *
 
 const personal_projects = [
     {
@@ -645,7 +645,7 @@ if(container) {
 }
 
 
-/*------------------ Expense Tracker ------------------------- */
+// *================= Expense Tracker =================*
 
 const balance = document.getElementById("balance");
 const money_plus= document.getElementById("money-plus");
@@ -684,14 +684,12 @@ function addTransaction (e) {
     }
 }
 
-/// Add transaction to the DOM list
+// *================= Add transaction to the DOM list =================*
 function addTransactionToDOM(transaction) {
 
-    /////// Get the sign plus or minus
     const sign = transaction.amount < 0 ? "-" : "+";
     const item = document.createElement("li");
 
-       // Add classes based on the value
     item.classList.add(transaction.amount < 0 ? "minus" : "plus");
 
     item.innerHTML = `
@@ -705,7 +703,7 @@ function addTransactionToDOM(transaction) {
     list.appendChild(item);
 }
 
-// Generate a random ID
+// *================= Generate a random ID =================*
 function generateId() {
     return Math.floor(Math.random() * 100000);
 }
@@ -738,7 +736,7 @@ function updateValue() {
 }
 
 
-// Update localStorage
+// **================= Update localStorage =================*
 function updateLocalStorage() {
     localStorage.setItem("transaction", JSON.stringify(transactions));
 }
@@ -757,7 +755,7 @@ if (list && form) {
 }
 
 
-/*------------------ TODO LIST ------------------------- */
+// *================= TODO LIST ================= *
 
 // Get elements
 const total_products = document.getElementById("total");
@@ -769,7 +767,7 @@ const amount_product = document.getElementById("amount_product");
 // Array
 let products = [];
 
-// Add product
+// *================= Add product =================*
 function addProduct(e) {
     e.preventDefault();
 
@@ -793,7 +791,7 @@ function addProduct(e) {
     }
 }
 
-// Add product to DOM
+// *================= Add product to DOM =================*
 function addProductToDOM(product) {
     const item = document.createElement("li");
 
@@ -804,16 +802,15 @@ function addProductToDOM(product) {
             <i class="fa-solid fa-trash"></i>
         </button>
     `;
-
     list_todo.appendChild(item);
 }
 
-// Generate ID
+// *================= Generate ID =================*
 function generateProductId() {
     return Math.floor(Math.random() * 1000000);
 }
 
-// Remove product
+// *================= Remove product =================*
 function removeProduct(id) {
     products = products.filter(product => product.id !== id);
 
@@ -824,14 +821,13 @@ function removeProduct(id) {
     updateTotal();
 }
 
-// Calculate total
+// *================= Calculate total =================*
 function updateTotal() {
     const total = products.reduce((acc, product) => acc + product.price, 0);
 
     total_products.innerText = total.toFixed(2);
 }
 
-// Event listener
 if (list_todo && form_todo) {
     form_todo.addEventListener("submit", addProduct);
 }
@@ -853,7 +849,7 @@ if(bookButton && bookHint) {
 }
 
 
-///////////// SEND AN EMAIL THROUGH CONTACT SECTION
+// *================= SEND AN EMAIL THROUGH CONTACT SECTION =================*
 
 const btn = document.getElementById("send_btn");
 console.log("Button:", btn);
@@ -908,7 +904,7 @@ if(btn) {
 }
 
 
-/* ========================SELECT HTML ELEMENTS =================================== */
+// =================SELECT HTML ELEMENTS ================= *
 
 // Name page
 const nameSection = document.getElementById("name-weather-form");
@@ -934,7 +930,7 @@ const previousVisit = localStorage.getItem("lastVisit");
 const lastVisit = document.getElementById("lastVisit");
 
 
-/* ============================API CONFIGURATION & WEATHER DATA =========================================== */
+// * =================API CONFIGURATION & WEATHER DATA ================= *
 
 const url = "https://api.open-meteo.com/v1/forecast?latitude=42.3314&longitude=-83.0458&current=temperature_2m,weather_code&timezone=America%2FDetroit";
 
@@ -977,7 +973,7 @@ const weatherDescriptions = {
 };
 
 
-/* ==================================GREETING FUNCTIONS ================================== */
+// *=================GREETING FUNCTIONS ================= *
 
 function getGreeting() {
 
@@ -1001,7 +997,7 @@ function getGreeting() {
 }
 
 
-/* ========================================================= DATE & TIME FUNCTIONS ========================================= */
+// * ================= DATE & TIME FUNCTIONS ================= */
 
 function getCurrentDateTime() {
 
@@ -1030,7 +1026,7 @@ function getCurrentDateTime() {
 }
 
 
-/* ========================================================= WEATHER HELPER FUNCTIONS =========================================== */
+// * ================= WEATHER HELPER FUNCTIONS ================= *
 
 // Map weather code to description
 
@@ -1039,7 +1035,7 @@ function mapWeatherCodeToDescription(code) {
 }
 
 
-// ====================================== DISPLAY LAST VISIT ======================================
+// *================= DISPLAY LAST VISIT =================*
 
 function displayLastVisit() {
 
@@ -1073,7 +1069,7 @@ function displayLastVisit() {
 }
 
 
-/* ====================================FETCH WEATHER DATA ================================== */
+// *=================FETCH WEATHER DATA ================= *
 
 async function fetchWeather() {
 
@@ -1104,13 +1100,12 @@ async function fetchWeather() {
         };
 
     } catch (error) {
-        ///console.error("Weather error:", error);
         return null;
     }
 }
 
 
-/* ================================DISPLAY WEATHER PAGE ====================================== */
+// * =================DISPLAY WEATHER PAGE ================= *
 
 function showWeatherPage() {
 
@@ -1123,7 +1118,7 @@ function showWeatherPage() {
 }
 
 
-/* ===============================UPDATE GREETING, DATE AND TIME ================================== */
+// * =================UPDATE GREETING, DATE AND TIME ================= *
 
 function updateGreetingDateTime() {
 
@@ -1139,7 +1134,7 @@ function updateGreetingDateTime() {
 }
 
 
-/* ========================================== NAME FORM & LOCAL STORAGE ========================================= */
+// * ================= NAME FORM & LOCAL STORAGE ================= *
 
 // Check localStorage
 
@@ -1180,7 +1175,7 @@ nameForm.addEventListener("submit", (event) => {
 });
 
 
-/* ============================================== RUN & UPDATE ========================================= */
+// * ================= RUN & UPDATE ================= *
 
 setInterval(updateGreetingDateTime, 1000);
 
