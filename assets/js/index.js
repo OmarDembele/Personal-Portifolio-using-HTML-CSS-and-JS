@@ -14,6 +14,35 @@ else if (currentPage.includes("contact.html")) {
     document.getElementById("contact").classList.add("active");
 }
 
+
+/*  ===============================RESPONSIVE ==================================== */
+
+const navRight = document.getElementById("navRight");
+const navbar = document.getElementById("navbar");
+
+if (navRight && navbar) {
+
+    const navIcon = navRight.querySelector("i");
+
+    // Initial state when page loads
+    navbar.classList.remove("active");
+    navIcon.classList.replace("uil-times", "uil-bars");
+
+    navRight.addEventListener("click", function () {
+
+        navbar.classList.toggle("active");
+
+        if (navbar.classList.contains("active")) {
+            navIcon.classList.replace("uil-bars", "uil-times");
+            navRight.setAttribute("aria-label", "Close navigation");
+        } else {
+            navIcon.classList.replace("uil-times", "uil-bars");
+            navRight.setAttribute("aria-label", "Open navigation");
+        }
+
+    });
+}
+
 /*------------------ List of classes ------------------------- */
 
 const courseList = [
@@ -902,6 +931,7 @@ const temperature = document.getElementById("temperature");
 const weatherDescription = document.getElementById("weatherDescription");
 const weatherText = document.getElementById("weatherText");
 const previousVisit = localStorage.getItem("lastVisit");
+const lastVisit = document.getElementById("lastVisit");
 
 
 /* ============================API CONFIGURATION & WEATHER DATA =========================================== */
@@ -1015,7 +1045,7 @@ function displayLastVisit() {
 
     const previousVisit = localStorage.getItem("lastVisit");
 
-    if (previousVisit) {
+    if (previousVisit && lastVisit) {
 
         const lastDate = new Date(previousVisit);
 
@@ -1074,7 +1104,7 @@ async function fetchWeather() {
         };
 
     } catch (error) {
-        console.error("Weather error:", error);
+        ///console.error("Weather error:", error);
         return null;
     }
 }
@@ -1084,9 +1114,12 @@ async function fetchWeather() {
 
 function showWeatherPage() {
 
-    nameSection.style.display = "none";
+    if (nameSection || headerWeather || weatherSection) {
+        nameSection.style.display = "none";
     headerWeather.style.display = "flex";
     weatherSection.style.display = "block";
+    }
+    
 }
 
 
@@ -1098,9 +1131,11 @@ function updateGreetingDateTime() {
     const greeting = getGreeting();
     const dateTime = getCurrentDateTime();
 
-    greetingText.textContent = greeting +", " + user.toUpperCase();
-    currentTime.textContent = dateTime.time;
-    currentDate.textContent = dateTime.date;
+    if (user && greetingText && currentTime && currentDate && dateTime && greeting) {
+        greetingText.textContent = greeting + ", " + user.toUpperCase();
+        currentTime.textContent = dateTime.time;
+        currentDate.textContent = dateTime.date;
+    }
 }
 
 
@@ -1149,31 +1184,3 @@ nameForm.addEventListener("submit", (event) => {
 
 setInterval(updateGreetingDateTime, 1000);
 
-
-/*  ==================================================RESPONSIVE ============================================= */
-
-const navRight = document.getElementById("navRight");
-const navbar = document.getElementById("navbar");
-
-if (navRight && navbar) {
-
-    const navIcon = navRight.querySelector("i");
-
-    // Initial state when page loads
-    navbar.classList.remove("active");
-    navIcon.classList.replace("uil-times", "uil-bars");
-
-    navRight.addEventListener("click", function () {
-
-        navbar.classList.toggle("active");
-
-        if (navbar.classList.contains("active")) {
-            navIcon.classList.replace("uil-bars", "uil-times");
-            navRight.setAttribute("aria-label", "Close navigation");
-        } else {
-            navIcon.classList.replace("uil-times", "uil-bars");
-            navRight.setAttribute("aria-label", "Open navigation");
-        }
-
-    });
-}
